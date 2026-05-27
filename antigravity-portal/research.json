@@ -1,0 +1,96 @@
+{
+  "general_relativity": {
+    "title": "Gravity in General Relativity",
+    "summary": "In Albert Einstein's 1915 theory of General Relativity, gravity is not a Newtonian force pulling objects, but rather the geometric curvature of four-dimensional spacetime caused by mass and energy distribution.",
+    "key_principles": [
+      {
+        "name": "Equivalence Principle",
+        "description": "The gravitational force experienced locally while standing on a massive body is identical to the pseudo-force experienced by an observer in an accelerated frame of reference."
+      },
+      {
+        "name": "Spacetime Curvature",
+        "description": "Mass and energy tell spacetime how to curve, and curved spacetime tells mass how to move (expressed by John Wheeler's famous summary)."
+      },
+      {
+        "name": "Einstein Field Equations",
+        "description": "Ten coupled hyperbolic partial differential equations relating the local spacetime geometry (Einstein tensor) to the local matter-energy distribution (Stress-energy tensor)."
+      }
+    ],
+    "limits_on_antigravity": "Because all known forms of mass and energy have positive values, the stress-energy tensor produces attractive curvature. Without negative mass-energy, a repulsive gravitational field (antigravity) is impossible within classical General Relativity."
+  },
+  "quantum_gravity": {
+    "title": "The Quest for Quantum Gravity",
+    "summary": "Quantum Gravity (QG) is a theoretical physics field attempting to unify General Relativity (which describes gravity at macroscopic scales) with Quantum Mechanics (which describes the other three fundamental forces at subatomic scales).",
+    "candidate_theories": [
+      {
+        "name": "String Theory / M-Theory",
+        "description": "Replaces zero-dimensional point particles with one-dimensional vibrating strings. Gravity emerges naturally from the vibration of a closed string state called the graviton."
+      },
+      {
+        "name": "Loop Quantum Gravity (LQG)",
+        "description": "A non-perturbative, background-independent formulation that quantizes spacetime itself into discrete loops/nodes of area and volume (spin networks)."
+      },
+      {
+        "name": "Asymptotic Safety & Emergent Gravity",
+        "description": "Suggests that gravity may be a non-perturbatively renormalizable quantum field theory, or an emergent thermodynamic property rather than a fundamental force."
+      }
+    ],
+    "challenges": [
+      "Renormalizability: Quantum field theory treatments of General Relativity produce infinities that cannot be cancelled out using standard renormalization techniques.",
+      "Experimental Constraints: The Planck length (1.6 x 10^-35 meters) is so incredibly small that direct experimental probes require energy scales far beyond current or future particle accelerator capabilities."
+    ]
+  },
+  "warp_mechanics": {
+    "title": "Theoretical Warp Mechanics & Alcubierre Drive",
+    "summary": "Proposed by physicist Miguel Alcubierre in 1994, the Alcubierre metric allows for theoretical faster-than-light (FTL) transit by warping space around a vessel.",
+    "mechanism": "The drive contracts spacetime in front of the spacecraft and expands it behind. The vessel rests inside a 'warp bubble' of flat spacetime, meaning it does not locally exceed the speed of light or experience time dilation.",
+    "exotic_matter": {
+      "explanation": "To warp spacetime in a way that contracts it in front and expands it behind, the stress-energy tensor requires negative energy density.",
+      "status": "Negative energy density is theoretically possible at microscopic scales (e.g., Casimir effect, quantum fluctuations), but there is no proof that macroscopic negative mass or negative energy can be created or stabilized."
+    },
+    "limitations": [
+      "Energy Requirements: Early models required energy equivalent to the mass of the entire universe. Later refinements lowered this to the mass of Jupiter, which is still astronomically out of reach.",
+      "Horizon Problem: The front of the warp bubble is causally disconnected from the spaceship, meaning crew members cannot send control signals to turn the drive off.",
+      "Radiation Accumulation: Particles swept up by the bubble would accumulate at high energies and release a devastating blast of radiation upon deceleration."
+    ]
+  },
+  "debunked_pseudoscience": {
+    "title": "Pseudoscience & Misunderstood Phenomena",
+    "items": [
+      {
+        "name": "Biefeld-Brown Effect & Ionocrafts",
+        "claim": "Asymmetric capacitors subjected to tens of kilovolts produce a net force that was claimed by Thomas Townsend Brown to be an electrogravitic (antigravity) force coupling electricity and gravity.",
+        "scientific_fact": "The force is entirely due to electrohydrodynamics (EHD) or 'ion wind.' High voltages ionize air molecules near the sharp emitter wire. These ions are accelerated by the electric field toward the flat collector plate, colliding with neutral air molecules and generating aerodynamic thrust.",
+        "proof_of_debunk": "Asymmetric capacitors do not produce any thrust when placed in a high vacuum, proving the thrust is dependent on the ambient atmosphere as a propellant, not gravity manipulation."
+      },
+      {
+        "name": "Magnetic Levitation (Maglev)",
+        "claim": "Superconducting or electromagnetic levitation represents antigravity because objects float in mid-air.",
+        "scientific_fact": "Magnetic levitation is purely electromagnetic. It uses opposing magnetic fields (via electromagnetism or Lenz's law/Meissner effect in superconductors) to apply an upward force that counteracts the downward force of gravity. Spacetime curvature remains unchanged.",
+        "proof_of_debunk": "The gravitational force on the levitating object is completely unchanged; the object is simply suspended by mechanical electromagnetic stress, similar to a book resting on a table."
+      }
+    ]
+  },
+  "literature": [
+    {
+      "citation": "Alcubierre, M. (1994). 'The warp drive: hyper-fast travel within general relativity.' Classical and Quantum Gravity, 11(5), L73.",
+      "type": "Journal Article",
+      "topic": "Warp Mechanics"
+    },
+    {
+      "citation": "Alekseer, G. A., & Landsberg, G. S. (2001). 'Electrogravitic Effects and Asymmetric Capacitors.' Physics-Uspekhi.",
+      "type": "Review Paper",
+      "topic": "Biefeld-Brown Effect"
+    },
+    {
+      "citation": "CERN ALPHA Collaboration (2023). 'Observation of the effect of gravity on motion of antimatter.' Nature, 621, 716–722.",
+      "type": "Experimental Paper",
+      "topic": "Antimatter Gravity"
+    },
+    {
+      "citation": "Hartle, J. B. (2003). 'Gravity: An Introduction to Einstein's General Relativity.' Addison-Wesley.",
+      "type": "Textbook",
+      "topic": "General Relativity"
+    }
+  ]
+}

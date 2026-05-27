@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigravity Research & Academic Planner</title>
+  <meta name="description" content="Explore advanced theoretical physics regarding spacetime curvature, warp mechanics, quantum gravity, and plan your Winter Semester academic curriculum.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Premium Header & Navigation -->
+  <header id="main-header">
+    <div class="logo-container">
+      <div class="logo-icon" id="logo-icon-id"></div>
+      <span class="logo-text">ANTIGRAVITY</span>
+    </div>
+    <nav id="navbar">
+      <ul>
+        <li><button class="active" data-tab="overview" id="nav-btn-overview">Overview</button></li>
+        <li><button data-tab="dossier" id="nav-btn-dossier">Research Dossier</button></li>
+        <li><button data-tab="debunked" id="nav-btn-debunked">Debunking Pseudoscience</button></li>
+        <li><button data-tab="pathway" id="nav-btn-pathway">Academic Pathway</button></li>
+        <li><button data-tab="simulator" id="nav-btn-simulator">Spacetime Simulator</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero-banner">
+    <span class="badge">Advanced Physics Portal</span>
+    <h1>Gravitational Field Manipulation & Propulsion Research</h1>
+    <p>A comprehensive research platform examining the mathematics of general relativity, warp metrics, and the academic curricula required to master advanced propulsion science.</p>
+    <div class="cta-buttons">
+      <button class="btn btn-primary" data-tab="simulator" id="hero-btn-sim">Launch Simulator</button>
+      <button class="btn btn-secondary" data-tab="dossier" id="hero-btn-research">Read Physics Dossier</button>
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <main id="content-container">
+
+    <!-- TAB 1: OVERVIEW -->
+    <section class="tab-pane active" id="overview">
+      <div class="home-grid">
+        <div class="info-card blue">
+          <div class="card-icon">🌀</div>
+          <h3>Theoretical Foundations</h3>
+          <p>Examine how Einsteinian General Relativity defines gravity as curved spacetime, and review candidate theories of Quantum Gravity attempting to unify the forces.</p>
+        </div>
+        <div class="info-card magenta">
+          <div class="card-icon">🚀</div>
+          <h3>Warp Drive Mechanics</h3>
+          <p>Investigate the math of the Alcubierre metric, negative energy densities, and the immense engineering limitations surrounding macroscopic exotic matter.</p>
+        </div>
+        <div class="info-card cyan">
+          <div class="card-icon">🎓</div>
+          <h3>Winter Academic Planner</h3>
+          <p>Design a structured course schedule containing advanced electrodynamics, fluid mechanics, general relativity, and propulsion engineering to prepare for breakthrough research.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: RESEARCH DOSSIER -->
+    <section class="tab-pane" id="dossier">
+      <div class="dossier-layout">
+        <aside class="dossier-nav" id="dossier-nav-aside">
+          <h4 style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase;">Dossier Sections</h4>
+          <div id="dossier-nav-list">
+            <!-- Dynamically populated from research.json -->
+          </div>
+        </aside>
+        <article class="dossier-content-wrapper" id="dossier-active-content">
+          <!-- Active Section Content Loaded Here -->
+        </article>
+      </div>
+    </section>
+
+    <!-- TAB 3: DEBUNKING PSEUDOSCIENCE -->
+    <section class="tab-pane" id="debunked">
+      <h2 class="section-title-glow" style="margin-bottom: 2rem;">⚡ Debunking Pseudoscience Claims</h2>
+      <div class="debunk-list" id="debunked-list-container">
+        <!-- Dynamically populated from research.json -->
+      </div>
+    </section>
+
+    <!-- TAB 4: ACADEMIC PATHWAY -->
+    <section class="tab-pane" id="pathway">
+      <div class="planner-layout">
+        <div class="timeline-container">
+          <h2 class="section-title-glow" style="margin-bottom: 2rem;">🎓 Recommended Winter Course Pathway</h2>
+          <div class="timeline" id="pathway-timeline">
+            <!-- Dynamically populated from courses.json -->
+          </div>
+        </div>
+        <aside class="planner-sidebar" id="planner-sidebar-aside">
+          <h3>Semester Loadout Builder</h3>
+          <div class="sidebar-stats">
+            <div class="stat-box">
+              <div class="stat-val" id="credits-val">0</div>
+              <div class="stat-label">Total Credits</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val" id="courses-val">0</div>
+              <div class="stat-label">Selected</div>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Select courses to build your theoretical curriculum and verify prerequisites:</p>
+          <div class="courses-checklist" id="checklist-container">
+            <!-- Checklist checkboxes loaded dynamically -->
+          </div>
+          <div class="prereq-alert" id="prereq-warning">
+            <!-- Warning messages rendered dynamically -->
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TAB 5: SPACETIME SIMULATOR -->
+    <section class="tab-pane" id="simulator">
+      <div class="simulator-layout">
+        <div class="canvas-container" id="canvas-container-id">
+          <canvas id="gravity-canvas"></canvas>
+        </div>
+        <aside class="sim-sidebar" id="sim-sidebar-id">
+          <h3>Gravity Field Control</h3>
+          
+          <div class="tool-group">
+            <span class="tool-label">Active Tool Mode</span>
+            <div class="tool-buttons">
+              <button class="btn-tool active" id="mode-positive">Attractive (+M)</button>
+              <button class="btn-tool negative-mode" id="mode-negative">Repulsive (-M)</button>
+              <button class="btn-tool" id="mode-particle" style="grid-column: span 2; margin-top: 0.5rem;">Launch Test Particle</button>
+            </div>
+          </div>
+          
+          <div class="tool-group">
+            <span class="tool-label">Simulation Actions</span>
+            <button class="btn-action" id="btn-toggle-warp">Start Warp Drive (Alcubierre)</button>
+            <button class="btn-action clear" id="btn-clear-sim">Clear Workspace</button>
+          </div>
+
+          <div class="sim-status-box">
+            <p><strong>Masses Placed:</strong> <span id="mass-count">0</span></p>
+            <p><strong>Active Test Particles:</strong> <span id="particle-count">0</span></p>
+            <p><strong>Warp Bubble:</strong> <span id="warp-status">Inactive</span></p>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.4;">
+              💡 <strong>Instructions:</strong> Select a tool and click/tap in the canvas grid. Click close to an existing mass to delete it. Toggle Warp Drive and hover/move your cursor to guide the Alcubierre warp bubble!
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--glass-border); font-size: 0.85rem; color: var(--text-muted); margin-top: 4rem;">
+    <p>© 2026 Antigravity Physics Portal • Compiled for Advanced Academic Research & Curriculum Design.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

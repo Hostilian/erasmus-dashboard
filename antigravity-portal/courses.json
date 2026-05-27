@@ -1,0 +1,131 @@
+[
+  {
+    "id": "math-methods",
+    "code": "PHYS 4010",
+    "title": "Mathematical Methods for Physicists",
+    "subject": "Applied Mathematics",
+    "term": "Winter Semester",
+    "credits": 4,
+    "description": "Essential mathematical tools for advanced physics. Focuses on vector spaces, differential equations, complex analysis, tensor analysis, and boundary value problems.",
+    "prerequisites": ["Multivariable Calculus", "Linear Algebra"],
+    "syllabus_topics": [
+      "Vector spaces and curvilinear coordinate systems",
+      "Partial differential equations and boundary conditions",
+      "Introduction to tensor analysis and differential forms",
+      "Complex variables and contour integration",
+      "Green's functions and Sturm-Liouville theory"
+    ],
+    "textbooks": [
+      "Mathematical Methods for Physicists by George Arfken & Hans Weber"
+    ],
+    "relevance": "Provides the foundational tensor calculus and differential geometry mathematical tools needed to comprehend and formulate Einstein's Field Equations."
+  },
+  {
+    "id": "advanced-em",
+    "code": "PHYS 4100",
+    "title": "Advanced Electromagnetism",
+    "subject": "Physics",
+    "term": "Winter Semester",
+    "credits": 4,
+    "description": "A rigorous treatment of electrodynamics based on Maxwell's equations. Covers electrostatic and magnetostatic fields, electromagnetic waves, radiation, and relativistic electrodynamics.",
+    "prerequisites": ["Introductory Electromagnetism", "Differential Equations"],
+    "syllabus_topics": [
+      "Maxwell's equations in vacuum and matter",
+      "Electromagnetic wave propagation and waveguides",
+      "Potentials, gauge transformations (Lorenz & Coulomb gauges)",
+      "Radiation from moving charges and dipole radiation",
+      "Relativistic formulation of electrodynamics and field tensor F^uv"
+    ],
+    "textbooks": [
+      "Classical Electrodynamics by John David Jackson"
+    ],
+    "relevance": "Relativistic electrodynamics introduces four-vectors and the electromagnetic field tensor, serving as the bridge to Special Relativity and the study of ion wind propulsion (Biefeld-Brown)."
+  },
+  {
+    "id": "quantum-mech",
+    "code": "PHYS 4200",
+    "title": "Quantum Mechanics I",
+    "subject": "Physics",
+    "term": "Winter Semester",
+    "credits": 4,
+    "description": "Fundamental principles of quantum mechanics. Formulates the Schrodinger equation, wave functions, operators, angular momentum, spin, and perturbation theory.",
+    "prerequisites": ["Linear Algebra", "Classical Mechanics"],
+    "syllabus_topics": [
+      "The postulates of quantum mechanics and Hilbert spaces",
+      "One-dimensional problems (harmonic oscillator, potential wells)",
+      "Angular momentum and quantum mechanical spin",
+      "Three-dimensional systems and the hydrogen atom",
+      "Time-independent perturbation theory"
+    ],
+    "textbooks": [
+      "Introduction to Quantum Mechanics by David J. Griffiths",
+      "Principles of Quantum Mechanics by R. Shankar"
+    ],
+    "relevance": "Essential for understanding subatomic interactions, quantum fluctuations (Casimir effect), and the ultimate search for a unified Quantum Gravity theory."
+  },
+  {
+    "id": "fluid-dynamics",
+    "code": "AERO 4300",
+    "title": "Fluid Dynamics & Aerodynamics",
+    "subject": "Aerospace Engineering",
+    "term": "Winter Semester",
+    "credits": 3,
+    "description": "Governing equations of fluid motion. Focuses on inviscid and viscous flows, incompressible and compressible flow regimes, boundary layer theory, and aerodynamic forces.",
+    "prerequisites": ["Thermodynamics", "Vector Calculus"],
+    "syllabus_topics": [
+      "Navier-Stokes equations derivation and conservation laws",
+      "Potential flow theory and lift generation",
+      "Viscous flow and laminar/turbulent boundary layers",
+      "One-dimensional compressible flow and shock waves",
+      "Introduction to computational fluid dynamics (CFD)"
+    ],
+    "textbooks": [
+      "Fundamentals of Aerodynamics by John D. Anderson"
+    ],
+    "relevance": "Provides the fluid mechanics frameworks needed to analyze ionized gas flow in EHD propulsion systems (lifters) and warp-bubble fluid analogies."
+  },
+  {
+    "id": "general-relativity",
+    "code": "PHYS 5010",
+    "title": "General Relativity & Gravitation",
+    "subject": "Physics",
+    "term": "Winter Semester",
+    "credits": 4,
+    "description": "A comprehensive introduction to Einstein's theory of gravitation. Establishes spacetime geometry and applies it to black holes, gravitational waves, and cosmology.",
+    "prerequisites": ["PHYS 4010 (Math Methods)", "Classical Mechanics"],
+    "syllabus_topics": [
+      "Review of Special Relativity and flat spacetime metric",
+      "Differential geometry: manifolds, connections, curvature tensor",
+      "Derivation of the Einstein Field Equations",
+      "The Schwarzschild solution: black holes and solar system tests",
+      "Introduction to gravitational radiation and Friedmann cosmology"
+    ],
+    "textbooks": [
+      "Spacetime and Geometry: An Introduction to General Relativity by Sean Carroll",
+      "Gravity: An Introduction to Einstein's General Relativity by James B. Hartle"
+    ],
+    "relevance": "The core course for studying gravity manipulation. Teaches how to formulate spacetime metrics, calculate energy conditions, and analyze warp metrics like the Alcubierre drive."
+  },
+  {
+    "id": "aerospace-prop",
+    "code": "AERO 5420",
+    "title": "Advanced Aerospace Propulsion",
+    "subject": "Aerospace Engineering",
+    "term": "Winter Semester",
+    "credits": 3,
+    "description": "Analyzes the physics and engineering of air-breathing and rocket propulsion. Covers gas turbines, ramjets, scramjets, chemical rockets, and electric propulsion technologies.",
+    "prerequisites": ["AERO 4300 (Fluid Dynamics)", "Thermodynamics"],
+    "syllabus_topics": [
+      "Thermodynamic cycle analysis of turbojets and turbofans",
+      "Combustion physics, gas turbine components, and inlets",
+      "Chemical rocket dynamics, specific impulse, and nozzles",
+      "Electric propulsion: ion thrusters, Hall thrusters, and MPD thrusters",
+      "Advanced concept propulsion (fusion, sails, warp-metrics overview)"
+    ],
+    "textbooks": [
+      "Mechanics and Thermodynamics of Propulsion by Philip Hill & Carl Peterson",
+      "Rocket Propulsion Elements by George Sutton & Oscar Biblarz"
+    ],
+    "relevance": "Explores actual physical propulsion systems and provides a baseline for comparing classical chemical/electric rocket efficiency against theoretical space-bending warp drives."
+  }
+]
