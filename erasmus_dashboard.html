@@ -542,7 +542,10 @@
                 <i class="fa-solid fa-list-check"></i> Massive Task Board
             </button>
             <button class="tab-btn" onclick="switchTab('tab-active')">
-                <i class="fa-solid fa-graduation-cap"></i> Academic Options (36)
+                <i class="fa-solid fa-graduation-cap"></i> Active Options (18)
+            </button>
+            <button class="tab-btn" onclick="switchTab('tab-passed')">
+                <i class="fa-solid fa-calendar-xmark"></i> Passed Deadlines (18)
             </button>
             <button class="tab-btn" onclick="switchTab('tab-redflags')">
                 <i class="fa-solid fa-ban"></i> Excluded Red Flags (11)
@@ -726,19 +729,13 @@
             <div class="card">
                 <div class="card-title">
                     <i class="fa-solid fa-graduation-cap"></i>
-                    All Academic Options (Ranked for 061 Informatics)
+                    Active Recommended Universities (Nomination Deadline >= May 27, 2026)
                 </div>
                 <p style="color: var(--text-muted); margin-bottom: 20px;">
-                    Curated bilateral agreements for Informatics (061). Rated dynamically based on Cost of Living (30%), Work hours policy (10%), Bouldering gyms (10%), and Academic match score (50%).
+                    Curated bilateral agreements for Informatics (061) that are currently open or have rolling deadlines. Rated dynamically based on Cost of Living (30%), Work hours policy (10%), Bouldering gyms (10%), and Academic match score (50%).
                 </p>
                 <div class="controls-row" style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; align-items: center;">
-                    <input type="text" id="search-active" class="search-input" placeholder="Search by university, city or country..." onkeyup="filterTable('table-active-data')" style="flex-grow: 1; max-width: 400px;">
-                    
-                    <select id="status-filter" onchange="filterTable('table-active-data')" style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 12px 20px; border-radius: 12px; color: var(--text-main); font-size: 1rem; font-family: 'Outfit', sans-serif; cursor: pointer; outline: none; transition: border-color 0.2s;">
-                        <option value="all">All Deadlines (Active, Rolling & Passed)</option>
-                        <option value="active-rolling">Open & Rolling Only</option>
-                        <option value="passed">Passed Deadlines Only</option>
-                    </select>
+                    <input type="text" id="search-active" class="search-input" placeholder="Search by university, city or country..." onkeyup="filterTable('table-active-data', 'search-active')" style="flex-grow: 1; max-width: 400px;">
                 </div>
                 <div class="table-responsive">
                     <table id="table-active-data">
@@ -885,17 +882,17 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-8" data-status="passed">
+                            <tr data-uni-id="active-8" data-status="active">
                                 <td><strong>#9</strong></td>
-                                <td>Kauno kolegija / University of Applied Sciences</td>
-                                <td>Kaunas</td>
-                                <td>Lithuania</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (5.15.)</span></td>
-                                <td>4</td>
-                                <td>EN </td>
-                                <td><span class="score-badge">80.0</span></td>
+                                <td>UNIVERSIDADE PORTUCALENSE</td>
+                                <td>Porto</td>
+                                <td>Portugal</td>
+                                <td><span class="status-badge active"><i class="fa-solid fa-calendar-days"></i> Open (6.1.)</span></td>
+                                <td>2 BA; 2 IT</td>
+                                <td>PT/EN / 041 - Department of Economics and Management; 061 - Department of Science and Technology</td>
+                                <td><span class="score-badge">78.0</span></td>
                                 <td>
-                                    <button class="btn active" onclick='showModal({"row": 87, "country": "Lithuania", "town": "Kaunas", "university": "Kauno kolegija / University of Applied Sciences", "erasmus_code": "LT KAUNAS 08", "is_red": false, "lang1": "EN", "lang2": "", "spots": "4", "course_info": "", "notes": "", "deadline_fall_raw": "5.15.", "deadline_fall_parsed_str": "2026-05-15", "deadline_spring_raw": "11.15.", "bc_econ_link": "https://www.kaunokolegija.lt/en/", "bc_inf_link": "https://www.kaunokolegija.lt/en/applied-informatics-and-programming/", "general_link": "https://www.kaunokolegija.lt/en/", "academic_score": 9, "verified_courses": "\u2022 UNIX OS, Web Design, Interaction Design: Software Systems BSc (English)\n\u2022 Business Economics, Accounting, Statistics: Business Faculty (English)\n\u2022 Status: ~90% English Match. Deadline passed (May 15).", "score": 80.0})'>
+                                    <button class="btn active" onclick='showModal({"row": 108, "country": "Portugal", "town": "Porto", "university": "UNIVERSIDADE PORTUCALENSE", "erasmus_code": "P PORTO07", "is_red": false, "lang1": "PT/EN", "lang2": "041 - Department of Economics and Management; 061 - Department of Science and Technology", "spots": "2 BA; 2 IT", "course_info": "041 subjects in PT ( supported English material) in Economics/Management/Marketing; 061 subjets mainly in EN or supported English material  in Informatics Engineering/Information Systems for Management (subjects can be chosen from differ study programmes and different academic years)", "notes": "", "deadline_fall_raw": "6.1.", "deadline_fall_parsed_str": "2026-06-01", "deadline_spring_raw": "11.1.", "bc_econ_link": "https://www.upt.pt/en/home/departments/economics-and-management/", "bc_inf_link": "https://www.upt.pt/en/home/departments/science-and-technology/", "general_link": "https://www.upt.pt/en/erasmus/", "academic_score": 10, "verified_courses": "\u2022 UNIX OS, Web Design: Informatics Engineering BSc\n\u2022 Accounting, Statistics, Business Economics: IS for Management BSc\n\u2022 Status: 100% English Match (English support & exams).", "score": 78.0})'>
                                         <i class="fa-solid fa-circle-info"></i> Info
                                     </button>
                                 </td>
@@ -919,38 +916,6 @@
                             
                             <tr data-uni-id="active-10" data-status="active">
                                 <td><strong>#11</strong></td>
-                                <td>UNIVERSIDADE PORTUCALENSE</td>
-                                <td>Porto</td>
-                                <td>Portugal</td>
-                                <td><span class="status-badge active"><i class="fa-solid fa-calendar-days"></i> Open (6.1.)</span></td>
-                                <td>2 BA; 2 IT</td>
-                                <td>PT/EN / 041 - Department of Economics and Management; 061 - Department of Science and Technology</td>
-                                <td><span class="score-badge">78.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 108, "country": "Portugal", "town": "Porto", "university": "UNIVERSIDADE PORTUCALENSE", "erasmus_code": "P PORTO07", "is_red": false, "lang1": "PT/EN", "lang2": "041 - Department of Economics and Management; 061 - Department of Science and Technology", "spots": "2 BA; 2 IT", "course_info": "041 subjects in PT ( supported English material) in Economics/Management/Marketing; 061 subjets mainly in EN or supported English material  in Informatics Engineering/Information Systems for Management (subjects can be chosen from differ study programmes and different academic years)", "notes": "", "deadline_fall_raw": "6.1.", "deadline_fall_parsed_str": "2026-06-01", "deadline_spring_raw": "11.1.", "bc_econ_link": "https://www.upt.pt/en/home/departments/economics-and-management/", "bc_inf_link": "https://www.upt.pt/en/home/departments/science-and-technology/", "general_link": "https://www.upt.pt/en/erasmus/", "academic_score": 10, "verified_courses": "\u2022 UNIX OS, Web Design: Informatics Engineering BSc\n\u2022 Accounting, Statistics, Business Economics: IS for Management BSc\n\u2022 Status: 100% English Match (English support & exams).", "score": 78.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-11" data-status="passed">
-                                <td><strong>#12</strong></td>
-                                <td>University of Zagreb</td>
-                                <td>Zagreb</td>
-                                <td>Croatia</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (5.1.)</span></td>
-                                <td>2</td>
-                                <td>EN </td>
-                                <td><span class="score-badge">75.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 20, "country": "Croatia", "town": "Zagreb", "university": "University of Zagreb", "erasmus_code": "HR ZAGREB 01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2", "course_info": "Faculty of Agriculture only", "notes": "", "deadline_fall_raw": "5.1.", "deadline_fall_parsed_str": "2026-05-01", "deadline_spring_raw": "", "bc_econ_link": "https://www.efzg.unizg.hr/en", "bc_inf_link": "https://www.foi.unizg.hr/en", "general_link": "https://www.unizg.hr/homepage/", "academic_score": 7, "verified_courses": "\u2022 Informatics & Web: FOI offers Computing, Databases, and Web in English\n\u2022 Economics & Accounting: Faculty of Economics & Business (English)\n\u2022 Status: ~70% English Match. Deadline passed (May 1).", "score": 75.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-12" data-status="active">
-                                <td><strong>#13</strong></td>
                                 <td>University of Hohenheim</td>
                                 <td>Stuttgart</td>
                                 <td>Germany</td>
@@ -965,24 +930,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-13" data-status="passed">
-                                <td><strong>#14</strong></td>
-                                <td>South East Technological University</td>
-                                <td>Waterford</td>
-                                <td>Ireland</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (4.15.)</span></td>
-                                <td>4 BA; 4 IT</td>
-                                <td>EN </td>
-                                <td><span class="score-badge">67.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 75, "country": "Ireland", "town": "Waterford", "university": "South East Technological University", "erasmus_code": "IRL SETU01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "4 BA; 4 IT", "course_info": "061 are subjects under 041", "notes": "", "deadline_fall_raw": "4.15.", "deadline_fall_parsed_str": "2026-04-15", "deadline_spring_raw": "10.4.", "bc_econ_link": "https://www.setu.ie/", "bc_inf_link": "https://www.setu.ie/courses/bsc-hons-in-computer-science-common-entry", "general_link": "https://www.setu.ie/", "academic_score": 10, "verified_courses": "\u2022 UNIX OS: Cloud & Networks specialism (BSc Hons CS)\n\u2022 Web Design: Web & Frontend modules (BSc Hons CS)\n\u2022 Interaction Design: Games Dev & HCI modules (BSc Hons CS)\n\u2022 Statistics/Econ/Accounting: Common Entry CS/Business modules\n\u2022 Status: 100% English Match. Deadline passed (April 15).", "score": 67.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-14" data-status="active">
-                                <td><strong>#15</strong></td>
+                            <tr data-uni-id="active-11" data-status="active">
+                                <td><strong>#12</strong></td>
                                 <td>Juraj Dobrila university of Pula</td>
                                 <td>Pula</td>
                                 <td>Croatia</td>
@@ -997,24 +946,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-15" data-status="passed">
-                                <td><strong>#16</strong></td>
-                                <td>Kymenlaakso University of Applied Sciences</td>
-                                <td>Kotka</td>
-                                <td>Finland</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (1.5.)</span></td>
-                                <td>2 BA; 2 IT</td>
-                                <td>EN </td>
-                                <td><span class="score-badge">63.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 27, "country": "Finland", "town": "Kotka", "university": "Kymenlaakso University of Applied Sciences", "erasmus_code": "SF MIKKELI 07", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2 BA; 2 IT", "course_info": "06 a 07 only Bachelor", "notes": "", "deadline_fall_raw": "1.5.", "deadline_fall_parsed_str": "2026-05-01", "deadline_spring_raw": "15.10.", "bc_econ_link": "https://www.xamk.fi/en/studies/", "bc_inf_link": "https://www.xamk.fi/en/degrees/bachelor-of-engineering-information-technology/", "general_link": "https://www.xamk.fi/en/", "academic_score": 8, "verified_courses": "\u2022 UNIX/Web/Design: Bachelor of Engineering in IT (English-taught)\n\u2022 Business/Accounting: Business department modules in English\n\u2022 Status: ~80% English Match. Deadline passed (May 1).", "score": 63.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-16" data-status="rolling">
-                                <td><strong>#17</strong></td>
+                            <tr data-uni-id="active-12" data-status="rolling">
+                                <td><strong>#13</strong></td>
                                 <td>Uniwersytet Rolniczy im.Hugona Kołłątaja w Krakowie</td>
                                 <td>Krakow</td>
                                 <td>Poland</td>
@@ -1029,24 +962,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-17" data-status="passed">
-                                <td><strong>#18</strong></td>
-                                <td>Karlstad University</td>
-                                <td>Karlstad</td>
-                                <td>Sweden</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (1.4.)</span></td>
-                                <td>4</td>
-                                <td>EN </td>
-                                <td><span class="score-badge">60.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 134, "country": "Sweden", "town": "Karlstad", "university": "Karlstad University", "erasmus_code": "S KARLSTA 01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "4", "course_info": "Available Courses", "notes": "", "deadline_fall_raw": "1.4.", "deadline_fall_parsed_str": "2026-04-01", "deadline_spring_raw": "1.10.", "bc_econ_link": "https://www.kau.se/en/", "bc_inf_link": "https://www.kau.se/en/education/programmes-and-courses", "general_link": "https://www.kau.se/en/", "academic_score": 8, "verified_courses": "\u2022 CS & IT: English-taught BSc modules in AI, CS, and Information Systems\n\u2022 Business & Econ: Good range of English-taught business modules\n\u2022 Status: ~80% English Match. Deadline passed (April 1).", "score": 60.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-18" data-status="rolling">
-                                <td><strong>#19</strong></td>
+                            <tr data-uni-id="active-13" data-status="rolling">
+                                <td><strong>#14</strong></td>
                                 <td>Universita della Svizzera Italiana</td>
                                 <td>Lugano</td>
                                 <td>Switzerland</td>
@@ -1061,120 +978,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-19" data-status="passed">
-                                <td><strong>#20</strong></td>
-                                <td>Universidad Loyola Andalucia</td>
-                                <td>Sevilla</td>
-                                <td>Spain</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (15 May)</span></td>
-                                <td>2 -> 3 BA; 2 IT</td>
-                                <td>EN / ES</td>
-                                <td><span class="score-badge">59.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 122, "country": "Spain", "town": "Sevilla", "university": "Universidad Loyola Andalucia", "erasmus_code": "E CORDOBA 23", "is_red": false, "lang1": "EN", "lang2": "ES", "spots": "2 -> 3 BA; 2 IT", "course_info": "Courses", "notes": "", "deadline_fall_raw": "15 May", "deadline_fall_parsed_str": "2026-05-15", "deadline_spring_raw": "15 November", "bc_econ_link": "https://www.uloyola.es/", "bc_inf_link": "https://www.uloyola.es/", "general_link": "https://www.uloyola.es/", "academic_score": 6, "verified_courses": "\u2022 CS & Software: Spanish BSc; exchange students receive English tutorial support\n\u2022 Business & Econ: Good range of business courses with English support\n\u2022 Status: ~60% English Match. Deadline passed (May 15).", "score": 59.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-20" data-status="passed">
-                                <td><strong>#21</strong></td>
-                                <td>Polytechnic Institute of Viana do Castelo</td>
-                                <td>Viana do Castelo</td>
-                                <td>Portugal</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (30 April)</span></td>
-                                <td>2BA; 2IT</td>
-                                <td>EN/PT </td>
-                                <td><span class="score-badge">58.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 111, "country": "Portugal", "town": "Viana do Castelo", "university": "Polytechnic Institute of Viana do Castelo", "erasmus_code": "P VIANA-D01", "is_red": false, "lang1": "EN/PT", "lang2": "", "spots": "2BA; 2IT", "course_info": "Management and Informatics Engeneering", "notes": "", "deadline_fall_raw": "30 April", "deadline_fall_parsed_str": "2026-04-30", "deadline_spring_raw": "30 September", "bc_econ_link": "http://internacional.ipvc.pt/en/", "bc_inf_link": "http://internacional.ipvc.pt/en/", "general_link": "http://internacional.ipvc.pt/en/", "academic_score": 6, "verified_courses": "\u2022 CS & Networks: Portuguese BSc; exchange students get English materials & exams\n\u2022 Status: ~60% English Match. Deadline passed (April 30).", "score": 58.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-21" data-status="passed">
-                                <td><strong>#22</strong></td>
-                                <td>University of Cyprus</td>
-                                <td>Nicosia</td>
-                                <td>Cyprus</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (1 May)</span></td>
-                                <td>2 BA; 2 IT</td>
-                                <td>EN </td>
-                                <td><span class="score-badge">57.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 21, "country": "Cyprus", "town": "Nicosia", "university": "University of Cyprus", "erasmus_code": "CY NICOSIA 01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2 BA; 2 IT", "course_info": "Courses", "notes": "GPA between 6,5 and 10 plus EN certificate B2 (from CZU confirmation is sufficient)", "deadline_fall_raw": "1 May", "deadline_fall_parsed_str": "2026-05-01", "deadline_spring_raw": "1 October", "bc_econ_link": "https://www.ucy.ac.cy/econ/", "bc_inf_link": "https://www.cs.ucy.ac.cy/", "general_link": "https://www.ucy.ac.cy/", "academic_score": 6, "verified_courses": "\u2022 CS & IT: Greek BSc; informal English support and bibliography\n\u2022 Business & Econ: Greek BSc; informal English support\n\u2022 Status: ~60% English Match. Deadline passed (May 1).", "score": 57.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-22" data-status="passed">
-                                <td><strong>#23</strong></td>
-                                <td>The University of Bonn</td>
-                                <td>Bonn</td>
-                                <td>Germany</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (1.5.)</span></td>
-                                <td>4</td>
-                                <td>EN / DE</td>
-                                <td><span class="score-badge">57.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 51, "country": "Germany", "town": "Bonn", "university": "The University of Bonn", "erasmus_code": "D BONN 01", "is_red": false, "lang1": "EN", "lang2": "DE", "spots": "4", "course_info": "Bachelor: in German language, Master: in English language", "notes": "", "deadline_fall_raw": "1.5.", "deadline_fall_parsed_str": "2026-05-01", "deadline_spring_raw": "1 November", "bc_econ_link": "https://www.uni-bonn.de/", "bc_inf_link": "https://www.informatik.uni-bonn.de/", "general_link": "https://www.uni-bonn.de/", "academic_score": 6, "verified_courses": "\u2022 CS & Cyber Security: Bachelor's programs are 100% German-taught\n\u2022 Economics & CS: Bilingual BSc (German/English); requires German B2\n\u2022 Status: ~60% English Match. Deadline passed (May 1).", "score": 57.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-23" data-status="passed">
-                                <td><strong>#24</strong></td>
-                                <td>Wageningen University</td>
-                                <td>Wageningen</td>
-                                <td>Netherlands</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (1.4.)</span></td>
-                                <td>4BA; 4IT</td>
-                                <td>EN </td>
-                                <td><span class="score-badge">57.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 95, "country": "Netherlands", "town": "Wageningen", "university": "Wageningen University", "erasmus_code": "NL WAGENIN 01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "4BA; 4IT", "course_info": "Courses offer", "notes": "available for Bachelor in 3rd and 4th year / 1 st year Master / exception for 2nd year student choosing courses with code starting digit 1, 2 or 5 or the same study field", "deadline_fall_raw": "1.4.", "deadline_fall_parsed_str": "2026-04-01", "deadline_spring_raw": "15.9.", "bc_econ_link": "https://www.wur.nl/en/", "bc_inf_link": "https://www.wur.nl/en/education-programmes/bachelor/data-science-for-global-challenges.htm", "general_link": "https://www.wur.nl/en/", "academic_score": 8, "verified_courses": "\u2022 Data Science & AI: BSc Data Science for Global Challenges (English)\n\u2022 Business/Accounting/Stats: Agricultural/environmental business (English)\n\u2022 Status: ~80% English Match. Deadline passed (April 1).", "score": 57.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-24" data-status="passed">
-                                <td><strong>#25</strong></td>
-                                <td>Agricultural University - Plovdiv</td>
-                                <td>Plovdiv</td>
-                                <td>Bulgaria</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (5.15.)</span></td>
-                                <td>2 BA; 2 IT</td>
-                                <td>EN </td>
-                                <td><span class="score-badge">56.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 13, "country": "Bulgaria", "town": "Plovdiv", "university": "Agricultural University - Plovdiv", "erasmus_code": "BG PLOVDIV 01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2 BA; 2 IT", "course_info": "", "notes": "", "deadline_fall_raw": "5.15.", "deadline_fall_parsed_str": "2026-05-15", "deadline_spring_raw": "11.30.", "bc_econ_link": "https://www.au-plovdiv.bg/en/", "bc_inf_link": "https://www.au-plovdiv.bg/en/", "general_link": "https://www.au-plovdiv.bg/en/", "academic_score": 3, "verified_courses": "\u2022 Agriculture Economics: Business/agricultural economics in English\n\u2022 Informatics: Only basic computer literacy courses, no English BSc CS\n\u2022 Status: ~30% English Match. Deadline passed (May 15).", "score": 56.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-25" data-status="passed">
-                                <td><strong>#26</strong></td>
-                                <td>Sodertorns Hogskola</td>
-                                <td>Huddinge</td>
-                                <td>Sweden</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (25 April)</span></td>
-                                <td>2 BA; 2 IT</td>
-                                <td>EN </td>
-                                <td><span class="score-badge">55.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 133, "country": "Sweden", "town": "Huddinge", "university": "Sodertorns Hogskola", "erasmus_code": "S HUDDING01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2 BA; 2 IT", "course_info": "Course offer", "notes": "", "deadline_fall_raw": "25 April", "deadline_fall_parsed_str": "2026-04-25", "deadline_spring_raw": "", "bc_econ_link": "https://www.sh.se/", "bc_inf_link": "https://www.sh.se/courses", "general_link": "https://www.sh.se/", "academic_score": 7, "verified_courses": "\u2022 Informatics: Focuses on digitalization, UX design, and social implications of IT\n\u2022 UNIX / Technical CS: No low-level technical CS in English\n\u2022 Status: ~70% English Match. Deadline passed (April 25).", "score": 55.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-26" data-status="active">
-                                <td><strong>#27</strong></td>
+                            <tr data-uni-id="active-14" data-status="active">
+                                <td><strong>#15</strong></td>
                                 <td>Selcuk University</td>
                                 <td>Konya</td>
                                 <td>Turkey</td>
@@ -1189,24 +994,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-27" data-status="passed">
-                                <td><strong>#28</strong></td>
-                                <td>Norwegian University of Life Sciences</td>
-                                <td>As</td>
-                                <td>Norway</td>
-                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (15 May)</span></td>
-                                <td>2 BA; 2 IT</td>
-                                <td>EN </td>
-                                <td><span class="score-badge">52.0</span></td>
-                                <td>
-                                    <button class="btn active" onclick='showModal({"row": 96, "country": "Norway", "town": "As", "university": "Norwegian University of Life Sciences", "erasmus_code": "N AS03", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2 BA; 2 IT", "course_info": "Courses under School of Economics and Business (041) and Informatics under Faculty of Science and Technology (061)", "notes": "EN certificate or CZU confirmation", "deadline_fall_raw": "15 May", "deadline_fall_parsed_str": "2026-05-15", "deadline_spring_raw": "15 September", "bc_econ_link": "https://www.nmbu.no/en/", "bc_inf_link": "https://www.nmbu.no/en/studies/study-options", "general_link": "https://www.nmbu.no/en/", "academic_score": 7, "verified_courses": "\u2022 Data Science & CS: MSc Data Science in English; select BSc modules in English\n\u2022 Business & Econ: Undergrad is in Norwegian\n\u2022 Status: ~70% English Match. Deadline passed (May 15).", "score": 52.0})'>
-                                        <i class="fa-solid fa-circle-info"></i> Info
-                                    </button>
-                                </td>
-                            </tr>
-                            
-                            <tr data-uni-id="active-28" data-status="active">
-                                <td><strong>#29</strong></td>
+                            <tr data-uni-id="active-15" data-status="active">
+                                <td><strong>#16</strong></td>
                                 <td>Universitat de Lleida</td>
                                 <td>Lleida</td>
                                 <td>Spain</td>
@@ -1221,8 +1010,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-29" data-status="active">
-                                <td><strong>#30</strong></td>
+                            <tr data-uni-id="active-16" data-status="active">
+                                <td><strong>#17</strong></td>
                                 <td>Hochschule Ansbach</td>
                                 <td>Ansbach</td>
                                 <td>Germany</td>
@@ -1237,8 +1026,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-30" data-status="active">
-                                <td><strong>#31</strong></td>
+                            <tr data-uni-id="active-17" data-status="active">
+                                <td><strong>#18</strong></td>
                                 <td>Agticultural University of Athens</td>
                                 <td>Athens</td>
                                 <td>Greece</td>
@@ -1253,8 +1042,252 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-31" data-status="passed">
-                                <td><strong>#32</strong></td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Passed Deadlines (Can Request) -->
+        <div id="tab-passed" class="tab-content">
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                    Passed Nomination Deadlines (Potential Coordinator Request)
+                </div>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                    The nomination deadlines for these Informatics (061) universities have already passed, but they are not red-flagged. You can rank these independently and ask your department coordinator or professor if it is still possible to request an exception or extension for these spots.
+                </p>
+                <div class="controls-row" style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; align-items: center;">
+                    <input type="text" id="search-passed" class="search-input" placeholder="Search by university, city or country..." onkeyup="filterTable('table-passed-data', 'search-passed')" style="flex-grow: 1; max-width: 400px;">
+                </div>
+                <div class="table-responsive">
+                    <table id="table-passed-data">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable('table-passed-data', 0)">Rank</th>
+                                <th onclick="sortTable('table-passed-data', 1)">University</th>
+                                <th onclick="sortTable('table-passed-data', 2)">City</th>
+                                <th onclick="sortTable('table-passed-data', 3)">Country</th>
+                                <th onclick="sortTable('table-passed-data', 4)">Deadline & Status</th>
+                                <th onclick="sortTable('table-passed-data', 5)">Spots</th>
+                                <th onclick="sortTable('table-passed-data', 6)">Languages</th>
+                                <th onclick="sortTable('table-passed-data', 7)">Score</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr data-uni-id="passed-0" data-status="passed">
+                                <td><strong>#1</strong></td>
+                                <td>Kauno kolegija / University of Applied Sciences</td>
+                                <td>Kaunas</td>
+                                <td>Lithuania</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (5.15.)</span></td>
+                                <td>4</td>
+                                <td>EN </td>
+                                <td><span class="score-badge">80.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 87, "country": "Lithuania", "town": "Kaunas", "university": "Kauno kolegija / University of Applied Sciences", "erasmus_code": "LT KAUNAS 08", "is_red": false, "lang1": "EN", "lang2": "", "spots": "4", "course_info": "", "notes": "", "deadline_fall_raw": "5.15.", "deadline_fall_parsed_str": "2026-05-15", "deadline_spring_raw": "11.15.", "bc_econ_link": "https://www.kaunokolegija.lt/en/", "bc_inf_link": "https://www.kaunokolegija.lt/en/applied-informatics-and-programming/", "general_link": "https://www.kaunokolegija.lt/en/", "academic_score": 9, "verified_courses": "\u2022 UNIX OS, Web Design, Interaction Design: Software Systems BSc (English)\n\u2022 Business Economics, Accounting, Statistics: Business Faculty (English)\n\u2022 Status: ~90% English Match. Deadline passed (May 15).", "score": 80.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-1" data-status="passed">
+                                <td><strong>#2</strong></td>
+                                <td>University of Zagreb</td>
+                                <td>Zagreb</td>
+                                <td>Croatia</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (5.1.)</span></td>
+                                <td>2</td>
+                                <td>EN </td>
+                                <td><span class="score-badge">75.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 20, "country": "Croatia", "town": "Zagreb", "university": "University of Zagreb", "erasmus_code": "HR ZAGREB 01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2", "course_info": "Faculty of Agriculture only", "notes": "", "deadline_fall_raw": "5.1.", "deadline_fall_parsed_str": "2026-05-01", "deadline_spring_raw": "", "bc_econ_link": "https://www.efzg.unizg.hr/en", "bc_inf_link": "https://www.foi.unizg.hr/en", "general_link": "https://www.unizg.hr/homepage/", "academic_score": 7, "verified_courses": "\u2022 Informatics & Web: FOI offers Computing, Databases, and Web in English\n\u2022 Economics & Accounting: Faculty of Economics & Business (English)\n\u2022 Status: ~70% English Match. Deadline passed (May 1).", "score": 75.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-2" data-status="passed">
+                                <td><strong>#3</strong></td>
+                                <td>South East Technological University</td>
+                                <td>Waterford</td>
+                                <td>Ireland</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (4.15.)</span></td>
+                                <td>4 BA; 4 IT</td>
+                                <td>EN </td>
+                                <td><span class="score-badge">67.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 75, "country": "Ireland", "town": "Waterford", "university": "South East Technological University", "erasmus_code": "IRL SETU01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "4 BA; 4 IT", "course_info": "061 are subjects under 041", "notes": "", "deadline_fall_raw": "4.15.", "deadline_fall_parsed_str": "2026-04-15", "deadline_spring_raw": "10.4.", "bc_econ_link": "https://www.setu.ie/", "bc_inf_link": "https://www.setu.ie/courses/bsc-hons-in-computer-science-common-entry", "general_link": "https://www.setu.ie/", "academic_score": 10, "verified_courses": "\u2022 UNIX OS: Cloud & Networks specialism (BSc Hons CS)\n\u2022 Web Design: Web & Frontend modules (BSc Hons CS)\n\u2022 Interaction Design: Games Dev & HCI modules (BSc Hons CS)\n\u2022 Statistics/Econ/Accounting: Common Entry CS/Business modules\n\u2022 Status: 100% English Match. Deadline passed (April 15).", "score": 67.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-3" data-status="passed">
+                                <td><strong>#4</strong></td>
+                                <td>Kymenlaakso University of Applied Sciences</td>
+                                <td>Kotka</td>
+                                <td>Finland</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (1.5.)</span></td>
+                                <td>2 BA; 2 IT</td>
+                                <td>EN </td>
+                                <td><span class="score-badge">63.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 27, "country": "Finland", "town": "Kotka", "university": "Kymenlaakso University of Applied Sciences", "erasmus_code": "SF MIKKELI 07", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2 BA; 2 IT", "course_info": "06 a 07 only Bachelor", "notes": "", "deadline_fall_raw": "1.5.", "deadline_fall_parsed_str": "2026-05-01", "deadline_spring_raw": "15.10.", "bc_econ_link": "https://www.xamk.fi/en/studies/", "bc_inf_link": "https://www.xamk.fi/en/degrees/bachelor-of-engineering-information-technology/", "general_link": "https://www.xamk.fi/en/", "academic_score": 8, "verified_courses": "\u2022 UNIX/Web/Design: Bachelor of Engineering in IT (English-taught)\n\u2022 Business/Accounting: Business department modules in English\n\u2022 Status: ~80% English Match. Deadline passed (May 1).", "score": 63.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-4" data-status="passed">
+                                <td><strong>#5</strong></td>
+                                <td>Karlstad University</td>
+                                <td>Karlstad</td>
+                                <td>Sweden</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (1.4.)</span></td>
+                                <td>4</td>
+                                <td>EN </td>
+                                <td><span class="score-badge">60.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 134, "country": "Sweden", "town": "Karlstad", "university": "Karlstad University", "erasmus_code": "S KARLSTA 01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "4", "course_info": "Available Courses", "notes": "", "deadline_fall_raw": "1.4.", "deadline_fall_parsed_str": "2026-04-01", "deadline_spring_raw": "1.10.", "bc_econ_link": "https://www.kau.se/en/", "bc_inf_link": "https://www.kau.se/en/education/programmes-and-courses", "general_link": "https://www.kau.se/en/", "academic_score": 8, "verified_courses": "\u2022 CS & IT: English-taught BSc modules in AI, CS, and Information Systems\n\u2022 Business & Econ: Good range of English-taught business modules\n\u2022 Status: ~80% English Match. Deadline passed (April 1).", "score": 60.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-5" data-status="passed">
+                                <td><strong>#6</strong></td>
+                                <td>Universidad Loyola Andalucia</td>
+                                <td>Sevilla</td>
+                                <td>Spain</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (15 May)</span></td>
+                                <td>2 -> 3 BA; 2 IT</td>
+                                <td>EN / ES</td>
+                                <td><span class="score-badge">59.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 122, "country": "Spain", "town": "Sevilla", "university": "Universidad Loyola Andalucia", "erasmus_code": "E CORDOBA 23", "is_red": false, "lang1": "EN", "lang2": "ES", "spots": "2 -> 3 BA; 2 IT", "course_info": "Courses", "notes": "", "deadline_fall_raw": "15 May", "deadline_fall_parsed_str": "2026-05-15", "deadline_spring_raw": "15 November", "bc_econ_link": "https://www.uloyola.es/", "bc_inf_link": "https://www.uloyola.es/", "general_link": "https://www.uloyola.es/", "academic_score": 6, "verified_courses": "\u2022 CS & Software: Spanish BSc; exchange students receive English tutorial support\n\u2022 Business & Econ: Good range of business courses with English support\n\u2022 Status: ~60% English Match. Deadline passed (May 15).", "score": 59.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-6" data-status="passed">
+                                <td><strong>#7</strong></td>
+                                <td>Polytechnic Institute of Viana do Castelo</td>
+                                <td>Viana do Castelo</td>
+                                <td>Portugal</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (30 April)</span></td>
+                                <td>2BA; 2IT</td>
+                                <td>EN/PT </td>
+                                <td><span class="score-badge">58.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 111, "country": "Portugal", "town": "Viana do Castelo", "university": "Polytechnic Institute of Viana do Castelo", "erasmus_code": "P VIANA-D01", "is_red": false, "lang1": "EN/PT", "lang2": "", "spots": "2BA; 2IT", "course_info": "Management and Informatics Engeneering", "notes": "", "deadline_fall_raw": "30 April", "deadline_fall_parsed_str": "2026-04-30", "deadline_spring_raw": "30 September", "bc_econ_link": "http://internacional.ipvc.pt/en/", "bc_inf_link": "http://internacional.ipvc.pt/en/", "general_link": "http://internacional.ipvc.pt/en/", "academic_score": 6, "verified_courses": "\u2022 CS & Networks: Portuguese BSc; exchange students get English materials & exams\n\u2022 Status: ~60% English Match. Deadline passed (April 30).", "score": 58.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-7" data-status="passed">
+                                <td><strong>#8</strong></td>
+                                <td>University of Cyprus</td>
+                                <td>Nicosia</td>
+                                <td>Cyprus</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (1 May)</span></td>
+                                <td>2 BA; 2 IT</td>
+                                <td>EN </td>
+                                <td><span class="score-badge">57.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 21, "country": "Cyprus", "town": "Nicosia", "university": "University of Cyprus", "erasmus_code": "CY NICOSIA 01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2 BA; 2 IT", "course_info": "Courses", "notes": "GPA between 6,5 and 10 plus EN certificate B2 (from CZU confirmation is sufficient)", "deadline_fall_raw": "1 May", "deadline_fall_parsed_str": "2026-05-01", "deadline_spring_raw": "1 October", "bc_econ_link": "https://www.ucy.ac.cy/econ/", "bc_inf_link": "https://www.cs.ucy.ac.cy/", "general_link": "https://www.ucy.ac.cy/", "academic_score": 6, "verified_courses": "\u2022 CS & IT: Greek BSc; informal English support and bibliography\n\u2022 Business & Econ: Greek BSc; informal English support\n\u2022 Status: ~60% English Match. Deadline passed (May 1).", "score": 57.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-8" data-status="passed">
+                                <td><strong>#9</strong></td>
+                                <td>The University of Bonn</td>
+                                <td>Bonn</td>
+                                <td>Germany</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (1.5.)</span></td>
+                                <td>4</td>
+                                <td>EN / DE</td>
+                                <td><span class="score-badge">57.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 51, "country": "Germany", "town": "Bonn", "university": "The University of Bonn", "erasmus_code": "D BONN 01", "is_red": false, "lang1": "EN", "lang2": "DE", "spots": "4", "course_info": "Bachelor: in German language, Master: in English language", "notes": "", "deadline_fall_raw": "1.5.", "deadline_fall_parsed_str": "2026-05-01", "deadline_spring_raw": "1 November", "bc_econ_link": "https://www.uni-bonn.de/", "bc_inf_link": "https://www.informatik.uni-bonn.de/", "general_link": "https://www.uni-bonn.de/", "academic_score": 6, "verified_courses": "\u2022 CS & Cyber Security: Bachelor's programs are 100% German-taught\n\u2022 Economics & CS: Bilingual BSc (German/English); requires German B2\n\u2022 Status: ~60% English Match. Deadline passed (May 1).", "score": 57.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-9" data-status="passed">
+                                <td><strong>#10</strong></td>
+                                <td>Wageningen University</td>
+                                <td>Wageningen</td>
+                                <td>Netherlands</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (1.4.)</span></td>
+                                <td>4BA; 4IT</td>
+                                <td>EN </td>
+                                <td><span class="score-badge">57.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 95, "country": "Netherlands", "town": "Wageningen", "university": "Wageningen University", "erasmus_code": "NL WAGENIN 01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "4BA; 4IT", "course_info": "Courses offer", "notes": "available for Bachelor in 3rd and 4th year / 1 st year Master / exception for 2nd year student choosing courses with code starting digit 1, 2 or 5 or the same study field", "deadline_fall_raw": "1.4.", "deadline_fall_parsed_str": "2026-04-01", "deadline_spring_raw": "15.9.", "bc_econ_link": "https://www.wur.nl/en/", "bc_inf_link": "https://www.wur.nl/en/education-programmes/bachelor/data-science-for-global-challenges.htm", "general_link": "https://www.wur.nl/en/", "academic_score": 8, "verified_courses": "\u2022 Data Science & AI: BSc Data Science for Global Challenges (English)\n\u2022 Business/Accounting/Stats: Agricultural/environmental business (English)\n\u2022 Status: ~80% English Match. Deadline passed (April 1).", "score": 57.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-10" data-status="passed">
+                                <td><strong>#11</strong></td>
+                                <td>Agricultural University - Plovdiv</td>
+                                <td>Plovdiv</td>
+                                <td>Bulgaria</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (5.15.)</span></td>
+                                <td>2 BA; 2 IT</td>
+                                <td>EN </td>
+                                <td><span class="score-badge">56.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 13, "country": "Bulgaria", "town": "Plovdiv", "university": "Agricultural University - Plovdiv", "erasmus_code": "BG PLOVDIV 01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2 BA; 2 IT", "course_info": "", "notes": "", "deadline_fall_raw": "5.15.", "deadline_fall_parsed_str": "2026-05-15", "deadline_spring_raw": "11.30.", "bc_econ_link": "https://www.au-plovdiv.bg/en/", "bc_inf_link": "https://www.au-plovdiv.bg/en/", "general_link": "https://www.au-plovdiv.bg/en/", "academic_score": 3, "verified_courses": "\u2022 Agriculture Economics: Business/agricultural economics in English\n\u2022 Informatics: Only basic computer literacy courses, no English BSc CS\n\u2022 Status: ~30% English Match. Deadline passed (May 15).", "score": 56.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-11" data-status="passed">
+                                <td><strong>#12</strong></td>
+                                <td>Sodertorns Hogskola</td>
+                                <td>Huddinge</td>
+                                <td>Sweden</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (25 April)</span></td>
+                                <td>2 BA; 2 IT</td>
+                                <td>EN </td>
+                                <td><span class="score-badge">55.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 133, "country": "Sweden", "town": "Huddinge", "university": "Sodertorns Hogskola", "erasmus_code": "S HUDDING01", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2 BA; 2 IT", "course_info": "Course offer", "notes": "", "deadline_fall_raw": "25 April", "deadline_fall_parsed_str": "2026-04-25", "deadline_spring_raw": "", "bc_econ_link": "https://www.sh.se/", "bc_inf_link": "https://www.sh.se/courses", "general_link": "https://www.sh.se/", "academic_score": 7, "verified_courses": "\u2022 Informatics: Focuses on digitalization, UX design, and social implications of IT\n\u2022 UNIX / Technical CS: No low-level technical CS in English\n\u2022 Status: ~70% English Match. Deadline passed (April 25).", "score": 55.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-12" data-status="passed">
+                                <td><strong>#13</strong></td>
+                                <td>Norwegian University of Life Sciences</td>
+                                <td>As</td>
+                                <td>Norway</td>
+                                <td><span class="status-badge passed"><i class="fa-solid fa-calendar-xmark"></i> Passed (15 May)</span></td>
+                                <td>2 BA; 2 IT</td>
+                                <td>EN </td>
+                                <td><span class="score-badge">52.0</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({"row": 96, "country": "Norway", "town": "As", "university": "Norwegian University of Life Sciences", "erasmus_code": "N AS03", "is_red": false, "lang1": "EN", "lang2": "", "spots": "2 BA; 2 IT", "course_info": "Courses under School of Economics and Business (041) and Informatics under Faculty of Science and Technology (061)", "notes": "EN certificate or CZU confirmation", "deadline_fall_raw": "15 May", "deadline_fall_parsed_str": "2026-05-15", "deadline_spring_raw": "15 September", "bc_econ_link": "https://www.nmbu.no/en/", "bc_inf_link": "https://www.nmbu.no/en/studies/study-options", "general_link": "https://www.nmbu.no/en/", "academic_score": 7, "verified_courses": "\u2022 Data Science & CS: MSc Data Science in English; select BSc modules in English\n\u2022 Business & Econ: Undergrad is in Norwegian\n\u2022 Status: ~70% English Match. Deadline passed (May 15).", "score": 52.0})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            
+                            <tr data-uni-id="passed-13" data-status="passed">
+                                <td><strong>#14</strong></td>
                                 <td>Fachhochschule Bingen</td>
                                 <td>Bingen</td>
                                 <td>Germany</td>
@@ -1269,8 +1302,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-32" data-status="passed">
-                                <td><strong>#33</strong></td>
+                            <tr data-uni-id="passed-14" data-status="passed">
+                                <td><strong>#15</strong></td>
                                 <td>Westphalian University of Applied Sciences</td>
                                 <td>Gelsenkirchen</td>
                                 <td>Germany</td>
@@ -1285,8 +1318,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-33" data-status="passed">
-                                <td><strong>#34</strong></td>
+                            <tr data-uni-id="passed-15" data-status="passed">
+                                <td><strong>#16</strong></td>
                                 <td>ISVOUGA</td>
                                 <td>Santa Maria de Feira</td>
                                 <td>Portugal</td>
@@ -1301,8 +1334,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-34" data-status="passed">
-                                <td><strong>#35</strong></td>
+                            <tr data-uni-id="passed-16" data-status="passed">
+                                <td><strong>#17</strong></td>
                                 <td>Dania Academy of Higher Education</td>
                                 <td>Randers</td>
                                 <td>Denmark</td>
@@ -1317,8 +1350,8 @@
                                 </td>
                             </tr>
                             
-                            <tr data-uni-id="active-35" data-status="passed">
-                                <td><strong>#36</strong></td>
+                            <tr data-uni-id="passed-17" data-status="passed">
+                                <td><strong>#18</strong></td>
                                 <td>Bifrost University</td>
                                 <td>Borgarnes</td>
                                 <td>Iceland</td>

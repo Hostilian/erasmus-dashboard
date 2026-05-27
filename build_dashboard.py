@@ -434,6 +434,10 @@ passed_deadlines.sort(key=lambda x: x['score'], reverse=True)
 red_flagged.sort(key=lambda x: x['score'], reverse=True)
 secondary_list.sort(key=lambda x: (x['country'], x['university']))
 
+# Define active recommended options (valid & open/rolling) sorted by score
+active_options = valid_deadlines + open_deadlines
+active_options.sort(key=lambda x: x['score'], reverse=True)
+
 def get_deadline_status(u):
     parsed_dl_str = u['deadline_fall_parsed_str']
     raw_dl = u['deadline_fall_raw'].lower()
@@ -1053,7 +1057,10 @@ html_content = f"""<!DOCTYPE html>
                 <i class="fa-solid fa-list-check"></i> Massive Task Board
             </button>
             <button class="tab-btn" onclick="switchTab('tab-active')">
-                <i class="fa-solid fa-graduation-cap"></i> Academic Options ({len(non_red)})
+                <i class="fa-solid fa-graduation-cap"></i> Active Options ({len(active_options)})
+            </button>
+            <button class="tab-btn" onclick="switchTab('tab-passed')">
+                <i class="fa-solid fa-calendar-xmark"></i> Passed Deadlines ({len(passed_deadlines)})
             </button>
             <button class="tab-btn" onclick="switchTab('tab-redflags')">
                 <i class="fa-solid fa-ban"></i> Excluded Red Flags ({len(red_flagged)})
@@ -1237,19 +1244,13 @@ html_content = f"""<!DOCTYPE html>
             <div class="card">
                 <div class="card-title">
                     <i class="fa-solid fa-graduation-cap"></i>
-                    All Academic Options (Ranked for 061 Informatics)
+                    Active Recommended Universities (Nomination Deadline >= May 27, 2026)
                 </div>
                 <p style="color: var(--text-muted); margin-bottom: 20px;">
-                    Curated bilateral agreements for Informatics (061). Rated dynamically based on Cost of Living (30%), Work hours policy (10%), Bouldering gyms (10%), and Academic match score (50%).
+                    Curated bilateral agreements for Informatics (061) that are currently open or have rolling deadlines. Rated dynamically based on Cost of Living (30%), Work hours policy (10%), Bouldering gyms (10%), and Academic match score (50%).
                 </p>
                 <div class="controls-row" style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; align-items: center;">
-                    <input type="text" id="search-active" class="search-input" placeholder="Search by university, city or country..." onkeyup="filterTable('table-active-data')" style="flex-grow: 1; max-width: 400px;">
-                    
-                    <select id="status-filter" onchange="filterTable('table-active-data')" style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 12px 20px; border-radius: 12px; color: var(--text-main); font-size: 1rem; font-family: 'Outfit', sans-serif; cursor: pointer; outline: none; transition: border-color 0.2s;">
-                        <option value="all">All Deadlines (Active, Rolling & Passed)</option>
-                        <option value="active-rolling">Open & Rolling Only</option>
-                        <option value="passed">Passed Deadlines Only</option>
-                    </select>
+                    <input type="text" id="search-active" class="search-input" placeholder="Search by university, city or country..." onkeyup="filterTable('table-active-data', 'search-active')" style="flex-grow: 1; max-width: 400px;">
                 </div>
                 <div class="table-responsive">
                     <table id="table-active-data">
@@ -1283,7 +1284,59 @@ html_content = f"""<!DOCTYPE html>
                                     </button>
                                 </td>
                             </tr>
-                            ''' for idx, u in enumerate(non_red)])}
+                            ''' for idx, u in enumerate(active_options)])}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Passed Deadlines (Can Request) -->
+        <div id="tab-passed" class="tab-content">
+            <div class="card">
+                <div class="card-title">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                    Passed Nomination Deadlines (Potential Coordinator Request)
+                </div>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                    The nomination deadlines for these Informatics (061) universities have already passed, but they are not red-flagged. You can rank these independently and ask your department coordinator or professor if it is still possible to request an exception or extension for these spots.
+                </p>
+                <div class="controls-row" style="display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; align-items: center;">
+                    <input type="text" id="search-passed" class="search-input" placeholder="Search by university, city or country..." onkeyup="filterTable('table-passed-data', 'search-passed')" style="flex-grow: 1; max-width: 400px;">
+                </div>
+                <div class="table-responsive">
+                    <table id="table-passed-data">
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable('table-passed-data', 0)">Rank</th>
+                                <th onclick="sortTable('table-passed-data', 1)">University</th>
+                                <th onclick="sortTable('table-passed-data', 2)">City</th>
+                                <th onclick="sortTable('table-passed-data', 3)">Country</th>
+                                <th onclick="sortTable('table-passed-data', 4)">Deadline & Status</th>
+                                <th onclick="sortTable('table-passed-data', 5)">Spots</th>
+                                <th onclick="sortTable('table-passed-data', 6)">Languages</th>
+                                <th onclick="sortTable('table-passed-data', 7)">Score</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {"".join([f'''
+                            <tr data-uni-id="passed-{idx}" data-status="passed">
+                                <td><strong>#{idx+1}</strong></td>
+                                <td>{u['university']}</td>
+                                <td>{u['town']}</td>
+                                <td>{u['country']}</td>
+                                <td>{get_deadline_badge(u)}</td>
+                                <td>{u['spots']}</td>
+                                <td>{u['lang1']} {f"/ {u['lang2']}" if u['lang2'] else ""}</td>
+                                <td><span class="score-badge">{u['score']}</span></td>
+                                <td>
+                                    <button class="btn active" onclick='showModal({json.dumps(u)})'>
+                                        <i class="fa-solid fa-circle-info"></i> Info
+                                    </button>
+                                </td>
+                            </tr>
+                            ''' for idx, u in enumerate(passed_deadlines)])}
                         </tbody>
                     </table>
                 </div>
