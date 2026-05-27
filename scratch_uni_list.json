@@ -1,0 +1,222 @@
+{
+  "valid": [
+    {
+      "country": "Bulgaria",
+      "town": "Sofia",
+      "university": "University of National and World Economy",
+      "erasmus_code": "BG SOFIA 03",
+      "is_red": false,
+      "deadline_fall_raw": "6.30.",
+      "deadline_fall_parsed_str": "2026-06-30",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Bulgaria",
+      "town": "Varna",
+      "university": "University of Economics - Varna",
+      "erasmus_code": "BG VARNA 04",
+      "is_red": false,
+      "deadline_fall_raw": "5 June",
+      "deadline_fall_parsed_str": "2026-06-05",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Croatia",
+      "town": "Pula",
+      "university": "Juraj Dobrila university of Pula",
+      "erasmus_code": "HR PULA 01",
+      "is_red": false,
+      "deadline_fall_raw": "1.6.",
+      "deadline_fall_parsed_str": "2026-06-01",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Estonia",
+      "town": "Tallinn",
+      "university": "Estonian Entrepreneurship University of Applied Sciences",
+      "erasmus_code": "EE TALLINN 15",
+      "is_red": false,
+      "deadline_fall_raw": "15 June",
+      "deadline_fall_parsed_str": "2026-06-15",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Germany",
+      "town": "Ansbach",
+      "university": "Hochschule Ansbach",
+      "erasmus_code": "D ANSBACH 01",
+      "is_red": false,
+      "deadline_fall_raw": "31 May",
+      "deadline_fall_parsed_str": "2026-05-31",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Germany",
+      "town": "Stuttgart",
+      "university": "University of Hohenheim",
+      "erasmus_code": "D STUTTGA02",
+      "is_red": false,
+      "deadline_fall_raw": "6.1.",
+      "deadline_fall_parsed_str": "2026-06-01",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Greece",
+      "town": "Athens",
+      "university": "Agticultural University of Athens",
+      "erasmus_code": "G  ATHINE03",
+      "is_red": false,
+      "deadline_fall_raw": "6.25.",
+      "deadline_fall_parsed_str": "2026-06-25",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Portugal",
+      "town": "Porto",
+      "university": "UNIVERSIDADE PORTUCALENSE",
+      "erasmus_code": "P PORTO07",
+      "is_red": false,
+      "deadline_fall_raw": "6.1.",
+      "deadline_fall_parsed_str": "2026-06-01",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Spain",
+      "town": "Lleida",
+      "university": "Universitat de Lleida",
+      "erasmus_code": "E LLEIDA 01",
+      "is_red": false,
+      "deadline_fall_raw": "7.1.",
+      "deadline_fall_parsed_str": "2026-07-01",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Turkey",
+      "town": "Istanbul",
+      "university": "Beykent University",
+      "erasmus_code": "TR ISTANBU09",
+      "is_red": false,
+      "deadline_fall_raw": "1 July",
+      "deadline_fall_parsed_str": "2026-07-01",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Turkey",
+      "town": "Konya",
+      "university": "Selcuk University",
+      "erasmus_code": "TR KONYA01",
+      "is_red": false,
+      "deadline_fall_raw": "8.15.",
+      "deadline_fall_parsed_str": "2026-08-15",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    }
+  ],
+  "open": [
+    {
+      "country": "Lithuania",
+      "town": "Klaipeda",
+      "university": "=HYPERLINK(\"https://www.ltvk.lt/en/m/erasmus%2B/\",\"Lithuania Business University of Applied Sciences\")",
+      "erasmus_code": "LT KLAIPED 07",
+      "is_red": false,
+      "deadline_fall_raw": "",
+      "deadline_fall_parsed_str": "",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Poland",
+      "town": "Krakow",
+      "university": "Uniwersytet Rolniczy im.Hugona Kołłątaja w Krakowie",
+      "erasmus_code": "PL KRAKOW 06",
+      "is_red": false,
+      "deadline_fall_raw": "",
+      "deadline_fall_parsed_str": "",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Poland",
+      "town": "Warsaw",
+      "university": "Warsaw University of Life Sciences - SGGW",
+      "erasmus_code": "PL WARSZAW05",
+      "is_red": false,
+      "deadline_fall_raw": "",
+      "deadline_fall_parsed_str": "",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Portugal",
+      "town": "Evora",
+      "university": "University of Evora",
+      "erasmus_code": "P EVORA 01",
+      "is_red": false,
+      "deadline_fall_raw": "",
+      "deadline_fall_parsed_str": "",
+      "bc_inf_link": "https://www.uevora.pt/en/study/courses/bachelors-and-integrated-master-degrees?cod=9119&v=plano-estudos",
+      "bc_econ_link": "https://www.uevora.pt/en/study/courses/bachelors-and-integrated-master-degrees?cod=9081&v=plano-estudos",
+      "general_link": "https://www.uevora.pt/en/study/Mobility/Mobility-In/Student-Mobility"
+    },
+    {
+      "country": "Romania",
+      "town": "Sibiu",
+      "university": "Lucia Blaga University of Sibiu",
+      "erasmus_code": "RO SIBIU01",
+      "is_red": false,
+      "deadline_fall_raw": "",
+      "deadline_fall_parsed_str": "",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Slovakia",
+      "town": "Košice",
+      "university": "Technická univerzita v Košiciach",
+      "erasmus_code": "SK KOSICE 03",
+      "is_red": false,
+      "deadline_fall_raw": "",
+      "deadline_fall_parsed_str": "",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    },
+    {
+      "country": "Switzerland",
+      "town": "Lugano",
+      "university": "Universita della Svizzera Italiana",
+      "erasmus_code": "CH LUGANO 01",
+      "is_red": false,
+      "deadline_fall_raw": "",
+      "deadline_fall_parsed_str": "",
+      "bc_inf_link": null,
+      "bc_econ_link": null,
+      "general_link": null
+    }
+  ]
+}
