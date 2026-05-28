@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antigravity Research & Academic Planner</title>
-  <meta name="description" content="Explore advanced theoretical physics regarding spacetime curvature, warp mechanics, quantum gravity, and plan your Winter Semester academic curriculum.">
+  <title>Erasmus+ Relocation Dashboard & Academic Planner</title>
+  <meta name="description" content="Explore Erasmus+ relocation research, budgets, and visa details for Porto (UPT) and Lleida (UdL) for CZU Prague BSc Informatics student Eren Ozturk.">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,14 +14,16 @@
   <header id="main-header">
     <div class="logo-container">
       <div class="logo-icon" id="logo-icon-id"></div>
-      <span class="logo-text">ANTIGRAVITY</span>
+      <span class="logo-text">ERASMUS+ DOCK</span>
     </div>
     <nav id="navbar">
       <ul>
         <li><button class="active" data-tab="overview" id="nav-btn-overview">Overview</button></li>
+        <li><button data-tab="comparison" id="nav-btn-comparison">University Comparison</button></li>
         <li><button data-tab="dossier" id="nav-btn-dossier">Research Dossier</button></li>
-        <li><button data-tab="debunked" id="nav-btn-debunked">Debunking Pseudoscience</button></li>
-        <li><button data-tab="pathway" id="nav-btn-pathway">Academic Pathway</button></li>
+        <li><button data-tab="pathway" id="nav-btn-pathway">Academic Planner</button></li>
+        <li><button data-tab="calculator" id="nav-btn-calculator">Cost Calculator</button></li>
+        <li><button data-tab="checklist" id="nav-btn-checklist">Application Checklist</button></li>
         <li><button data-tab="simulator" id="nav-btn-simulator">Spacetime Simulator</button></li>
       </ul>
     </nav>
@@ -28,12 +31,12 @@
 
   <!-- Hero Section -->
   <section class="hero" id="hero-banner">
-    <span class="badge">Advanced Physics Portal</span>
-    <h1>Gravitational Field Manipulation & Propulsion Research</h1>
-    <p>A comprehensive research platform examining the mathematics of general relativity, warp metrics, and the academic curricula required to master advanced propulsion science.</p>
+    <span class="badge">Eren Ozturk • BSc Informatics</span>
+    <h1>UPT Porto vs. UdL Lleida Decision Portal</h1>
+    <p>A comprehensive research platform examining winter semester course mappings, financial balances, pet travel regulations, and bouldering lifestyles to select the optimal study exchange.</p>
     <div class="cta-buttons">
-      <button class="btn btn-primary" data-tab="simulator" id="hero-btn-sim">Launch Simulator</button>
-      <button class="btn btn-secondary" data-tab="dossier" id="hero-btn-research">Read Physics Dossier</button>
+      <button class="btn btn-primary" data-tab="comparison" id="hero-btn-comp">Compare Universities</button>
+      <button class="btn btn-secondary" data-tab="calculator" id="hero-btn-calc">Open Budget Calculator</button>
     </div>
   </section>
 
@@ -42,26 +45,102 @@
 
     <!-- TAB 1: OVERVIEW -->
     <section class="tab-pane active" id="overview">
+      <div class="profile-summary-card" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 16px; margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; align-items: center;">
+        <div style="flex: 1 1 500px;">
+          <h2 style="font-family: var(--font-title); margin-bottom: 0.5rem; color: var(--accent-cyan);">🎓 Candidate Mobility Profile</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">Eren Ozturk holds a Turkish passport and a valid Czech Student Residence Permit. As a working software developer and bouldering athlete, he requires an exchange that balances academics, finances, work rights, pet regulations, and outdoor rock climbing.</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.9rem;">
+            <div><strong>Major:</strong> BSc Informatics, CZU Prague</div>
+            <div><strong>Language:</strong> English (B2/C1)</div>
+            <div><strong>Companion:</strong> One pet cat</div>
+            <div><strong>Timeline:</strong> Winter Semester 2026/2027</div>
+          </div>
+        </div>
+        <div style="flex: 0 0 250px; background: rgba(0, 240, 255, 0.05); padding: 1.5rem; border-radius: 12px; border: 1px dashed var(--accent-cyan); text-align: center;">
+          <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary);">Direct Outgoing Coordinator</div>
+          <div style="font-family: var(--font-title); font-size: 1.15rem; font-weight: 600; margin: 0.5rem 0; color: #ffffff;">Ing. Veronika Brecklová</div>
+          <a href="mailto:pefoutgoing@pef.czu.cz" style="font-size: 0.85rem; color: var(--accent-cyan); text-decoration: none;">pefoutgoing@pef.czu.cz</a>
+        </div>
+      </div>
+
       <div class="home-grid">
         <div class="info-card blue">
-          <div class="card-icon">🌀</div>
-          <h3>Theoretical Foundations</h3>
-          <p>Examine how Einsteinian General Relativity defines gravity as curved spacetime, and review candidate theories of Quantum Gravity attempting to unify the forces.</p>
+          <div class="card-icon">📚</div>
+          <h3>Academic Course Mapping</h3>
+          <p>Verify matches for the 4 core CZU courses (OS, Web Tech, Statistics, Accounting). UPT Porto fits 100% cleanly; UdL Lleida offers winter alternatives that need approval.</p>
         </div>
         <div class="info-card magenta">
-          <div class="card-icon">🚀</div>
-          <h3>Warp Drive Mechanics</h3>
-          <p>Investigate the math of the Alcubierre metric, negative energy densities, and the immense engineering limitations surrounding macroscopic exotic matter.</p>
+          <div class="card-icon">💰</div>
+          <h3>Financial & Work Rights</h3>
+          <p>Compare costs against the €600/month CZU grant. Leverage work hours (Spain 30h/wk, Portugal 20h/wk) and secure temporary A1 certificate remote clearance.</p>
         </div>
         <div class="info-card cyan">
-          <div class="card-icon">🎓</div>
-          <h3>Winter Academic Planner</h3>
-          <p>Design a structured course schedule containing advanced electrodynamics, fluid mechanics, general relativity, and propulsion engineering to prepare for breakthrough research.</p>
+          <div class="card-icon">🐈</div>
+          <h3>Pet Relocation Logistics</h3>
+          <p>Track microchip, rabies vaccine, and pet passport timelines. Compare airline limits: Vueling's 10kg limit (Barcelona/Lleida) vs. TAP Portugal's 8kg limit (Porto).</p>
         </div>
       </div>
     </section>
 
-    <!-- TAB 2: RESEARCH DOSSIER -->
+    <!-- TAB 2: UNIVERSITY COMPARISON -->
+    <section class="tab-pane" id="comparison">
+      <h2 class="section-title-glow" style="margin-bottom: 2rem;">📊 Side-by-Side Destination Comparison</h2>
+      <div style="overflow-x: auto; background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--glass-border); font-family: var(--font-title); color: var(--accent-cyan); font-size: 1.1rem;">
+              <th style="padding: 1rem;">Metric</th>
+              <th style="padding: 1rem; width: 40%;">UPT Porto (Portugal)</th>
+              <th style="padding: 1rem; width: 40%;">UdL Lleida (Spain)</th>
+            </tr>
+          </thead>
+          <tbody style="font-size: 0.95rem;">
+            <tr style="border-bottom: 1px solid var(--glass-border);">
+              <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Erasmus Code & Rank</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><strong>P PORTO07</strong> (Academic Score: 10/10)</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><strong>E LLEIDA01</strong> (Academic Score: 4/10 due to language)</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--glass-border);">
+              <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Winter Course Fit</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">✅ 100% Clean Fit</span><br>All 4 courses are core requirements offered in English/bilingual format in Sem 1.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #fcd34d;">⚠️ Feasible with Substitutions</span><br>Requires approval for Web dinàmica (Digital Design dept) and Estadística Avançada (ADE dept) as winter substitutes.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--glass-border);">
+              <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Living Cost Level</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #fca5a5;">🔴 High (€1,000–€1,460 studio)</span><br>Porto is a major tourist/student hub. Rents are significantly higher.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">🟢 Low (€756–€1,010 studio)</span><br>Lleida is a smaller, inland city. Rents and services are highly affordable.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--glass-border);">
+              <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Pet Travel Companion</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #fcd34d;">⚠️ Strict 8 kg limit (TAP)</span><br>Direct flight Prague to Porto. 8kg cabin weight is very tight for adult cat + carrier.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">✅ 10 kg limit (Vueling)</span><br>Fly direct Prague to Barcelona (10kg limit), then take the fast AVE train to Lleida.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--glass-border);">
+              <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Pet Housing Policy</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);">Landlords can legally ban pets in private leases. No official university dorms.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);">Landlords can legally ban pets. Shared flat search is critical. Resis (Vila) ban pets.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--glass-border);">
+              <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Climbing Access</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);">Good indoor gyms (São Rock, Proa, The North Wall). No nearby outdoor rock crags.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">👑 World-Class Outdoor Crags</span><br>Margalef, Santa Linya, Oliana, Siurana within 60 mins. Boulder Indoor gym is €44.50/mo.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--glass-border);">
+              <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Non-EU Visa / Mobility</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);">Directive 2016/801 applies. UPT notifications to AIMA are slow. Register with local police in 30 days.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);">Directive 2016/801 applies. UdL ORI notifies Delegación del Gobierno. Positive silence applies after 30 days.</td>
+            </tr>
+            <tr>
+              <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Student Work Limits</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);">20 hours/week during semester. AIMA registration required.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">✅ 30 hours/week (RD 1155/2024)</span><br>Automatic work rights with university studies.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 3: RESEARCH DOSSIER -->
     <section class="tab-pane" id="dossier">
       <div class="dossier-layout">
         <aside class="dossier-nav" id="dossier-nav-aside">
@@ -76,19 +155,17 @@
       </div>
     </section>
 
-    <!-- TAB 3: DEBUNKING PSEUDOSCIENCE -->
-    <section class="tab-pane" id="debunked">
-      <h2 class="section-title-glow" style="margin-bottom: 2rem;">⚡ Debunking Pseudoscience Claims</h2>
-      <div class="debunk-list" id="debunked-list-container">
-        <!-- Dynamically populated from research.json -->
-      </div>
-    </section>
-
-    <!-- TAB 4: ACADEMIC PATHWAY -->
+    <!-- TAB 4: ACADEMIC PLANNER -->
     <section class="tab-pane" id="pathway">
       <div class="planner-layout">
         <div class="timeline-container">
-          <h2 class="section-title-glow" style="margin-bottom: 2rem;">🎓 Recommended Winter Course Pathway</h2>
+          <h2 class="section-title-glow" style="margin-bottom: 2rem;">🎓 Course Selection & Academic Fit</h2>
+          
+          <div class="uni-toggle-container" style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; max-width: 400px;">
+            <button class="btn-uni active" data-uni="UPT Porto" id="btn-uni-porto" style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--glass-border); background: var(--bg-surface); color: var(--text-main); cursor: pointer; transition: var(--transition-smooth); font-family: var(--font-title); font-weight: 600;">UPT Porto</button>
+            <button class="btn-uni" data-uni="UdL Lleida" id="btn-uni-lleida" style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--glass-border); background: var(--bg-surface); color: var(--text-main); cursor: pointer; transition: var(--transition-smooth); font-family: var(--font-title); font-weight: 600;">UdL Lleida</button>
+          </div>
+
           <div class="timeline" id="pathway-timeline">
             <!-- Dynamically populated from courses.json -->
           </div>
@@ -98,14 +175,14 @@
           <div class="sidebar-stats">
             <div class="stat-box">
               <div class="stat-val" id="credits-val">0</div>
-              <div class="stat-label">Total Credits</div>
+              <div class="stat-label">Total ECTS</div>
             </div>
             <div class="stat-box">
               <div class="stat-val" id="courses-val">0</div>
               <div class="stat-label">Selected</div>
             </div>
           </div>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Select courses to build your theoretical curriculum and verify prerequisites:</p>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Select courses to build your learning agreement. Aim for 24-30 ECTS credits to maintain full-time exchange status:</p>
           <div class="courses-checklist" id="checklist-container">
             <!-- Checklist checkboxes loaded dynamically -->
           </div>
@@ -116,7 +193,290 @@
       </div>
     </section>
 
-    <!-- TAB 5: SPACETIME SIMULATOR -->
+    <!-- TAB 5: COST CALCULATOR -->
+    <section class="tab-pane" id="calculator">
+      <h2 class="section-title-glow" style="margin-bottom: 2rem;">💰 Interactive Cost & Budget Calculator</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; align-items: start;">
+        
+        <!-- Controls Card -->
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 16px;">
+          <h3 style="font-family: var(--font-title); font-size: 1.35rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Budget Configuration</h3>
+          
+          <div class="tool-group" style="margin-bottom: 1.5rem;">
+            <label class="tool-label">Destination City</label>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+              <button class="btn-tool active" id="calc-city-porto" style="flex: 1; padding: 0.6rem; border-radius: 8px;">Porto</button>
+              <button class="btn-tool" id="calc-city-lleida" style="flex: 1; padding: 0.6rem; border-radius: 8px;">Lleida</button>
+            </div>
+          </div>
+
+          <div class="tool-group" style="margin-bottom: 1.5rem;">
+            <label class="tool-label">Housing Type</label>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+              <button class="btn-tool active" id="calc-housing-studio" style="flex: 1; padding: 0.6rem; border-radius: 8px;">Studio (T0)</button>
+              <button class="btn-tool" id="calc-housing-shared" style="flex: 1; padding: 0.6rem; border-radius: 8px;">Shared Flat</button>
+            </div>
+          </div>
+
+          <div class="tool-group" style="margin-bottom: 1.5rem;">
+            <label class="tool-label">Monthly Expenses (€)</label>
+            
+            <div style="margin-top: 1rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                <span>Rent & Deposit Allocation</span>
+                <span id="slider-rent-val">750</span>
+              </div>
+              <input type="range" id="slider-rent" min="200" max="1200" step="25" value="750" style="width: 100%; accent-color: var(--accent-cyan);">
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                <span>Groceries & Food</span>
+                <span id="slider-groceries-val">250</span>
+              </div>
+              <input type="range" id="slider-groceries" min="150" max="500" step="10" value="250" style="width: 100%; accent-color: var(--accent-cyan);">
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                <span>Utilities (Electric, Water, Internet)</span>
+                <span id="slider-utilities-val">150</span>
+              </div>
+              <input type="range" id="slider-utilities" min="50" max="300" step="10" value="150" style="width: 100%; accent-color: var(--accent-cyan);">
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                <span>Climbing Gym Membership</span>
+                <span id="slider-climbing-val">45</span>
+              </div>
+              <input type="range" id="slider-climbing" min="20" max="100" step="5" value="45" style="width: 100%; accent-color: var(--accent-cyan);">
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                <span>Public Transport</span>
+                <span id="slider-transport-val">30</span>
+              </div>
+              <input type="range" id="slider-transport" min="0" max="80" step="5" value="30" style="width: 100%; accent-color: var(--accent-cyan);">
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.02); padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--glass-border);">
+            <input type="checkbox" id="chk-social-grant" style="width: 1.1rem; height: 1.1rem; accent-color: var(--accent-blue);">
+            <div style="font-size: 0.9rem;">
+              <strong>Add Fewer Opportunities Top-Up</strong>
+              <span style="display: block; font-size: 0.75rem; color: var(--text-muted);">Adds extra €250/month to your Erasmus grant rate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output Card -->
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; min-height: 480px;">
+          <div>
+            <h3 style="font-family: var(--font-title); font-size: 1.35rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Financial Breakdown</h3>
+            
+            <div style="display: flex; justify-content: space-between; font-size: 1.05rem; margin-bottom: 0.75rem;">
+              <span>Monthly Expenses Total:</span>
+              <span id="calc-expenses-total" style="font-weight: 600;">€1,225</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; font-size: 1.05rem; margin-bottom: 0.75rem; color: var(--accent-cyan);">
+              <span>Erasmus Grant Contribution:</span>
+              <span id="calc-grant-total" style="font-weight: 600;">+€600</span>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 1.5rem 0;">
+
+            <div style="text-align: center; margin: 2rem 0;">
+              <div style="font-size: 0.9rem; text-transform: uppercase; color: var(--text-secondary); letter-spacing: 1px;">Net Monthly Balance</div>
+              <div id="calc-net-balance" style="font-family: var(--font-title); font-size: 3.5rem; font-weight: 800; color: var(--accent-magenta);">
+                -€625
+              </div>
+              <div id="calc-balance-badge" style="display: inline-block; padding: 0.25rem 1rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; margin-top: 0.5rem; background: rgba(239, 68, 68, 0.1); color: var(--accent-magenta); border: 1px solid rgba(239, 68, 68, 0.2);">
+                Deficit
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Bar Deficit/Surplus -->
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+              <span>Grant Coverage Rate</span>
+              <span id="calc-coverage-pct">49%</span>
+            </div>
+            <div style="width: 100%; height: 10px; background: rgba(255, 255, 255, 0.05); border-radius: 9999px; overflow: hidden; border: 1px solid var(--glass-border);">
+              <div id="calc-coverage-bar" style="width: 49%; height: 100%; background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan)); border-radius: 9999px; transition: var(--transition-smooth);"></div>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">
+              💡 Change housing options or adjust sliders to see if you can cover your rent using the base grant.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 6: APPLICATION CHECKLIST -->
+    <section class="tab-pane" id="checklist">
+      <h2 class="section-title-glow" style="margin-bottom: 2rem;">📋 Outgoing Application Timeline & Checklist</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 800px;">Track your Erasmus+ administrative milestones. Checkboxes persist locally in your browser. Be mindful of coordinator reviews and documentation dates.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;" id="checklist-phases-container">
+        
+        <!-- Phase 1: CZU Application -->
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--accent-cyan); margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>1. CZU Internal Phase</span>
+            <span style="font-size: 0.75rem; background: rgba(59, 130, 246, 0.1); padding: 0.1rem 0.5rem; border-radius: 4px; color: #93c5fd; font-weight: 500;">UIS Portal</span>
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-czu-nominal" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Submit Erasmus Application in CZU UIS (Choose UPT Porto / UdL Lleida)</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-czu-motlet" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Generate Motivation Letters (UPT & UdL) and sign them</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-czu-nomination" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Receive Official Nomination Confirmation from Veronika Brecklová</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Phase 2: Host Admission -->
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--accent-cyan); margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>2. Host Admission</span>
+            <span style="font-size: 0.75rem; background: rgba(59, 130, 246, 0.1); padding: 0.1rem 0.5rem; border-radius: 4px; color: #93c5fd; font-weight: 500;">Learning Agreement</span>
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-host-portal" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Register in Host Incoming Student Portal (UPT / UdL SIGMA)</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-host-la" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Draft Learning Agreement (4 selected courses, 24-30 ECTS)</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-host-signatures" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Get LA signed by CZU Coordinator and Host Coordinator</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-host-loa" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Receive official Letter of Acceptance (LoA)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Phase 3: Legal & Visa -->
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--accent-pink); margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>3. Visa & Mobility</span>
+            <span style="font-size: 0.75rem; background: rgba(236, 72, 153, 0.1); padding: 0.1rem 0.5rem; border-radius: 4px; color: #f472b6; font-weight: 500;">Directive 2016/801</span>
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-visa-notify" style="margin-top: 3px; accent-color: var(--accent-pink);">
+              <span>Request Host ORI to initiate Directive 2016/801 notification (Spain/Portugal)</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-visa-docs" style="margin-top: 3px; accent-color: var(--accent-pink);">
+              <span>Submit CZ residence permit, passport scan, and insurance to ORI</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-visa-a1" style="margin-top: 3px; accent-color: var(--accent-pink);">
+              <span>Apply for A1 Certificate from ČSSZ via employer (for remote work)</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-visa-ehic" style="margin-top: 3px; accent-color: var(--accent-pink);">
+              <span>Ensure Czech health insurance (VZP, etc.) covers Spain/Portugal</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Phase 4: Pet Travel -->
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--accent-cyan); margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>4. Pet Travel</span>
+            <span style="font-size: 0.75rem; background: rgba(59, 130, 246, 0.1); padding: 0.1rem 0.5rem; border-radius: 4px; color: #93c5fd; font-weight: 500;">Veterinary</span>
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-pet-microchip" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Verify microchip complies with ISO 11784/11785 standards</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-pet-rabies" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Administer rabies vaccine (must wait &gt;21 days before travel)</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-pet-passport" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Obtain EU Pet Passport from Prague veterinarian</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-pet-flight" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Book airline ticket & reserve pet in cabin slot (Vueling/TAP)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Phase 5: Housing Search -->
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--accent-cyan); margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>5. Housing & Climbing</span>
+            <span style="font-size: 0.75rem; background: rgba(59, 130, 246, 0.1); padding: 0.1rem 0.5rem; border-radius: 4px; color: #93c5fd; font-weight: 500;">Relocation</span>
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-house-search" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Search private flats on Idealista/Uniplaces (near EPS / UPT campus)</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-house-cat-ok" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Explicitly negotiate cat approval with the landlord</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-house-lease" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Sign lease contract (confirm security deposit is safe)</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-climb-register" style="margin-top: 3px; accent-color: var(--accent-blue);">
+              <span>Locate closest climbing gym (Boulder Indoor Lleida / São Rock Porto)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Phase 6: Arrival -->
+        <div style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem; border-radius: 12px;">
+          <h3 style="font-family: var(--font-title); font-size: 1.15rem; color: var(--accent-pink); margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <span>6. Arrival Registration</span>
+            <span style="font-size: 0.75rem; background: rgba(236, 72, 153, 0.1); padding: 0.1rem 0.5rem; border-radius: 4px; color: #f472b6; font-weight: 500;">Local Authorities</span>
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-arrival-la" style="margin-top: 3px; accent-color: var(--accent-pink);">
+              <span>Get host coordinator to sign Learning Agreement "During Mobility" (if changed)</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-arrival-conf" style="margin-top: 3px; accent-color: var(--accent-pink);">
+              <span>Get host coordinator to sign Certificate of Arrival (sends first grant tranche)</span>
+            </label>
+            <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; cursor: pointer;">
+              <input type="checkbox" class="chk-task" id="task-arrival-police" style="margin-top: 3px; accent-color: var(--accent-pink);">
+              <span>Register with police (AIMA in Porto, Extranjería in Spain) within 30 days</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 7: SPACETIME SIMULATOR -->
     <section class="tab-pane" id="simulator">
       <div class="simulator-layout">
         <div class="canvas-container" id="canvas-container-id">
@@ -155,7 +515,7 @@
   </main>
 
   <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--glass-border); font-size: 0.85rem; color: var(--text-muted); margin-top: 4rem;">
-    <p>© 2026 Antigravity Physics Portal • Compiled for Advanced Academic Research & Curriculum Design.</p>
+    <p>© 2026 Antigravity Portal Overhauled for Erasmus+ Relocation Research & Academic Planning.</p>
   </footer>
 
   <script src="app.js"></script>

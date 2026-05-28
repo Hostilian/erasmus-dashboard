@@ -839,6 +839,55 @@ canvas {
   color: var(--text-primary);
 }
 
+/* Custom Dashboard Components */
+.uni-toggle-container button {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.uni-toggle-container button.active {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.08);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+.btn-tool {
+  font-family: var(--font-title);
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+.btn-tool:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.btn-tool.active {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.08);
+}
+
+table th {
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+table td {
+  padding: 1rem;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+input[type="range"] {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  outline: none;
+  transition: background 0.3s;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -885,6 +934,7 @@ canvas {
   .dossier-nav button {
     width: auto;
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   
   .debunk-grid {

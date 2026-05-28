@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let researchData = null;
   let coursesData = null;
   let selectedCourses = new Set();
+  let selectedUniversity = 'UPT Porto';
   
   // Navigation & Tab Switching
-  const navButtons = document.querySelectorAll('nav button, .btn-secondary');
+  const navButtons = document.querySelectorAll('nav button, .btn, .cta-buttons button');
   const tabPanes = document.querySelectorAll('.tab-pane');
   
   function switchTab(tabId) {
@@ -51,8 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
       coursesData = await coursesResponse.json();
       
       populateResearchDossier();
-      populateDebunked();
       populateAcademicPathway();
+      initCostCalculator();
+      initChecklist();
     } catch (error) {
       console.error("Error loading research/courses database:", error);
     }
@@ -63,13 +65,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const dossierNav = document.getElementById('dossier-nav-list');
     const dossierContent = document.getElementById('dossier-active-content');
     
-    if (!researchData) return;
+    if (!researchData || !dossierNav || !dossierContent) return;
     
     const sections = [
-      { id: 'gr', title: 'General Relativity', data: researchData.general_relativity, type: 'gr' },
-      { id: 'qg', title: 'Quantum Gravity', data: researchData.quantum_gravity, type: 'qg' },
-      { id: 'warp', title: 'Warp Mechanics', data: researchData.warp_mechanics, type: 'warp' },
-      { id: 'lit', title: 'Literature Dossier', data: researchData.literature, type: 'lit' }
+      { id: 'acad', title: 'Academic Mapping', data: researchData.academics, type: 'acad' },
+      { id: 'fin', title: 'Grants & Finances', data: researchData.finances, type: 'fin' },
+      { id: 'visa', title: 'Immigration & Visa', data: researchData.visa, type: 'visa' },
+      { id: 'house', title: 'Student Housing', data: researchData.housing, type: 'house' },
+      { id: 'pet', title: 'Pet Relocation', data: researchData.pet_travel, type: 'pet' },
+      { id: 'climb', title: 'Climbing Scene', data: researchData.climbing, type: 'climb' },
+      { id: 'lit', title: 'Legal & Lit Citations', data: researchData.literature, type: 'lit' }
     ];
     
     dossierNav.innerHTML = '';
@@ -91,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderDossierSection(sec) {
     const wrapper = document.getElementById('dossier-active-content');
+    if (!wrapper) return;
     wrapper.innerHTML = '';
     
     const h2 = document.createElement('h2');
@@ -98,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     h2.innerHTML = `<span>⚡</span> ${sec.title}`;
     wrapper.appendChild(h2);
     
-    if (sec.type === 'gr') {
+    if (sec.type === 'acad') {
       const p = document.createElement('p');
       p.style.marginBottom = '2rem';
       p.textContent = sec.data.summary;
@@ -116,17 +122,17 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const limitDiv = document.createElement('div');
       limitDiv.className = 'relevance-box';
-      limitDiv.innerHTML = `<strong>Antigravity Implications:</strong> ${sec.data.limits_on_antigravity}`;
+      limitDiv.innerHTML = `<strong>CZU Approvals & Credit Transfers:</strong> ${sec.data.limits_on_antigravity}`;
       wrapper.appendChild(limitDiv);
       
-    } else if (sec.type === 'qg') {
+    } else if (sec.type === 'fin') {
       const p = document.createElement('p');
       p.style.marginBottom = '2rem';
       p.textContent = sec.data.summary;
       wrapper.appendChild(p);
       
       const subTitle = document.createElement('h3');
-      subTitle.textContent = 'Candidate Theories';
+      subTitle.textContent = 'Grant Structures';
       subTitle.style.margin = '1.5rem 0 1rem 0';
       wrapper.appendChild(subTitle);
       
@@ -143,14 +149,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const challengesDiv = document.createElement('div');
       challengesDiv.className = 'theory-block';
       challengesDiv.innerHTML = `
-        <h4 style="color: var(--accent-magenta);">Core Barriers to Unified Field Theory</h4>
-        <ul style="margin-top: 0.5rem; padding-left: 1.25rem;">
-          ${sec.data.challenges.map(c => `<li style="margin-bottom: 0.5rem;">${c}</li>`).join('')}
+        <h4 style="color: var(--accent-magenta);">Core Relocation & Work Challenges</h4>
+        <ul style="margin-top: 0.5rem; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+          ${sec.data.challenges.map(c => `<li>${c}</li>`).join('')}
         </ul>
       `;
       wrapper.appendChild(challengesDiv);
       
-    } else if (sec.type === 'warp') {
+    } else if (sec.type === 'visa') {
       const p = document.createElement('p');
       p.style.marginBottom = '1.5rem';
       p.textContent = sec.data.summary;
@@ -164,20 +170,51 @@ document.addEventListener('DOMContentLoaded', () => {
       const exotic = document.createElement('div');
       exotic.className = 'theory-block';
       exotic.innerHTML = `
-        <h4 style="color: var(--accent-pink);">The Exotic Matter Requirement</h4>
+        <h4 style="color: var(--accent-pink);">Required Documentation</h4>
         <p>${sec.data.exotic_matter.explanation}</p>
-        <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary);">Current Status: ${sec.data.exotic_matter.status}</p>
+        <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-secondary);">Application Status: ${sec.data.exotic_matter.status}</p>
       `;
       wrapper.appendChild(exotic);
       
       const limitsDiv = document.createElement('div');
       limitsDiv.innerHTML = `
-        <h3 style="margin-bottom: 1rem;">Primary Physical Barriers</h3>
+        <h3 style="margin-bottom: 1rem;">Primary Limits & Rules</h3>
         <ul style="padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
           ${sec.data.limitations.map(l => `<li>${l}</li>`).join('')}
         </ul>
       `;
       wrapper.appendChild(limitsDiv);
+      
+    } else if (sec.type === 'house' || sec.type === 'pet' || sec.type === 'climb') {
+      const p = document.createElement('p');
+      p.style.marginBottom = '2rem';
+      p.textContent = sec.data.summary;
+      wrapper.appendChild(p);
+      
+      sec.data.items.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'debunk-card';
+        div.style.marginBottom = '1.5rem';
+        div.innerHTML = `
+          <div class="debunk-header">
+            <h3>${item.name}</h3>
+          </div>
+          <div class="debunk-grid">
+            <div class="debunk-box claim" style="background: rgba(255, 255, 255, 0.02);">
+              <h4 style="color: var(--accent-cyan);">🔍 Topic Inquiry</h4>
+              <p>${item.claim}</p>
+            </div>
+            <div class="debunk-box fact" style="background: rgba(0, 240, 255, 0.02);">
+              <h4 style="color: #6ee7b7;">✅ Verified Reality</h4>
+              <p style="color: var(--text-primary);">${item.scientific_fact}</p>
+            </div>
+          </div>
+          <div class="debunk-proof" style="background: rgba(139, 92, 246, 0.05); border-color: rgba(139, 92, 246, 0.2);">
+            <strong>Relocation Guideline:</strong> ${item.proof_of_debunk}
+          </div>
+        `;
+        wrapper.appendChild(div);
+      });
       
     } else if (sec.type === 'lit') {
       const grid = document.createElement('div');
@@ -199,48 +236,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Populate Pseudoscience Debunked
-  function populateDebunked() {
-    const listWrapper = document.getElementById('debunked-list-container');
-    if (!researchData || !listWrapper) return;
-    
-    listWrapper.innerHTML = '';
-    researchData.debunked_pseudoscience.items.forEach(item => {
-      const card = document.createElement('div');
-      card.className = 'debunk-card';
-      card.innerHTML = `
-        <div class="debunk-header">
-          <h3>${item.name}</h3>
-          <span class="status-badge">DEBUNKED</span>
-        </div>
-        <div class="debunk-grid">
-          <div class="debunk-box claim">
-            <h4>❌ Pseudoscience Claim</h4>
-            <p>${item.claim}</p>
-          </div>
-          <div class="debunk-box fact">
-            <h4>✅ Verifiable Physical Reality</h4>
-            <p>${item.scientific_fact}</p>
-          </div>
-        </div>
-        <div class="debunk-proof">
-          <strong>Direct Scientific Refutation:</strong> ${item.proof_of_debunk}
-        </div>
-      `;
-      listWrapper.appendChild(card);
-    });
-  }
-
   // Populate Academic Planner Pathway
   function populateAcademicPathway() {
     const timelineWrapper = document.getElementById('pathway-timeline');
     const checklistWrapper = document.getElementById('checklist-container');
+    const btnUniPorto = document.getElementById('btn-uni-porto');
+    const btnUniLleida = document.getElementById('btn-uni-lleida');
+    
     if (!coursesData || !timelineWrapper || !checklistWrapper) return;
+    
+    // Setup university toggle listeners
+    btnUniPorto.addEventListener('click', () => {
+      btnUniPorto.classList.add('active');
+      btnUniLleida.classList.remove('active');
+      selectedUniversity = 'UPT Porto';
+      selectedCourses.clear();
+      renderCourses();
+    });
+    
+    btnUniLleida.addEventListener('click', () => {
+      btnUniLleida.classList.add('active');
+      btnUniPorto.classList.remove('active');
+      selectedUniversity = 'UdL Lleida';
+      selectedCourses.clear();
+      renderCourses();
+    });
+
+    renderCourses();
+  }
+
+  function renderCourses() {
+    const timelineWrapper = document.getElementById('pathway-timeline');
+    const checklistWrapper = document.getElementById('checklist-container');
     
     timelineWrapper.innerHTML = '';
     checklistWrapper.innerHTML = '';
     
-    coursesData.forEach((course, idx) => {
+    const filteredCourses = coursesData.filter(c => c.university === selectedUniversity);
+    
+    filteredCourses.forEach((course, idx) => {
       // Timeline Card
       const timelineItem = document.createElement('div');
       timelineItem.className = `timeline-item ${idx === 0 ? 'active' : ''}`;
@@ -248,19 +282,16 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="timeline-card">
           <div class="course-meta">
             <span class="course-code">${course.code}</span>
-            <span class="course-credits">${course.credits} Credits • ${course.term}</span>
+            <span class="course-credits">${course.ects} ECTS • ${course.term}</span>
           </div>
           <h3>${course.title}</h3>
           <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${course.description}</p>
-          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
-            <strong>Prerequisites:</strong> ${course.prerequisites.join(', ')}
-          </div>
-          <strong style="font-size: 0.85rem; display: block; margin-top: 0.5rem;">Syllabus Content:</strong>
+          <strong style="font-size: 0.85rem; display: block; margin-top: 0.5rem; color: var(--accent-cyan);">Syllabus Content:</strong>
           <ul class="syllabus-list">
             ${course.syllabus_topics.map(t => `<li>${t}</li>`).join('')}
           </ul>
           <div class="relevance-box">
-            <strong>Relevance to Gravity:</strong> ${course.relevance}
+            <strong>Equivalency & Relevance:</strong> ${course.relevance}
           </div>
         </div>
       `;
@@ -274,12 +305,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <input type="checkbox" id="chk-${course.id}">
         <div class="checklist-text">
           <span class="checklist-title">${course.title}</span>
-          <span class="checklist-code">${course.code} (${course.credits} Cr)</span>
+          <span class="checklist-code">${course.code} (${course.ects} ECTS)</span>
         </div>
       `;
       
       const checkbox = checklistItem.querySelector('input');
-      
       checklistItem.addEventListener('click', (e) => {
         if (e.target !== checkbox) {
           checkbox.checked = !checkbox.checked;
@@ -289,6 +319,8 @@ document.addEventListener('DOMContentLoaded', () => {
       
       checklistWrapper.appendChild(checklistItem);
     });
+
+    updatePlannerStats();
   }
 
   // Course Selector Logic
@@ -308,22 +340,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function updatePlannerStats() {
     let totalCredits = 0;
     let selectedCount = 0;
-    let missingPrereqs = [];
     
     selectedCourses.forEach(id => {
       const course = coursesData.find(c => c.id === id);
       if (course) {
-        totalCredits += course.credits;
+        totalCredits += course.ects;
         selectedCount++;
-        
-        // Check prerequisites
-        course.prerequisites.forEach(prereqName => {
-          // Check if prereq matches any of the existing course titles that are selected
-          const reqCourse = coursesData.find(c => c.title === prereqName);
-          if (reqCourse && !selectedCourses.has(reqCourse.id)) {
-            missingPrereqs.push(`"${course.title}" requires "${prereqName}"`);
-          }
-        });
       }
     });
     
@@ -331,14 +353,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('credits-val').textContent = totalCredits;
     document.getElementById('courses-val').textContent = selectedCount;
     
-    // Handle Alerts
+    // Warning alerts (min 20 ECTS, recommended 30 ECTS)
     const alertDiv = document.getElementById('prereq-warning');
-    if (missingPrereqs.length > 0) {
+    if (selectedCount > 0 && totalCredits < 24) {
       alertDiv.innerHTML = `
-        <strong>⚠️ Prerequisite Warnings:</strong>
-        <ul style="margin-top: 0.5rem; padding-left: 1rem;">
-          ${missingPrereqs.map(p => `<li>${p}</li>`).join('')}
-        </ul>
+        <strong>⚠️ Credit Load Warning:</strong>
+        <p style="margin-top: 0.25rem;">You have selected ${totalCredits} ECTS. CZU Prague requires a minimum of 24 ECTS (ideally 30) for full-time winter semester mobility approval.</p>
       `;
       alertDiv.classList.add('active');
     } else {
@@ -347,10 +367,213 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ----------------------------------------------------
+  // Interactive Cost Calculator Tab Logic
+  // ----------------------------------------------------
+  let calcCity = 'Porto';
+  let calcHousing = 'studio';
+
+  function initCostCalculator() {
+    const btnCityPorto = document.getElementById('calc-city-porto');
+    const btnCityLleida = document.getElementById('calc-city-lleida');
+    const btnHousingStudio = document.getElementById('calc-housing-studio');
+    const btnHousingShared = document.getElementById('calc-housing-shared');
+
+    const sliderRent = document.getElementById('slider-rent');
+    const sliderGroceries = document.getElementById('slider-groceries');
+    const sliderUtilities = document.getElementById('slider-utilities');
+    const sliderClimbing = document.getElementById('slider-climbing');
+    const sliderTransport = document.getElementById('slider-transport');
+
+    const chkSocial = document.getElementById('chk-social-grant');
+
+    if (!btnCityPorto) return;
+
+    // Listeners for City Selection
+    btnCityPorto.addEventListener('click', () => {
+      btnCityPorto.classList.add('active');
+      btnCityLleida.classList.remove('active');
+      calcCity = 'Porto';
+      applyCityDefaults();
+    });
+    btnCityLleida.addEventListener('click', () => {
+      btnCityLleida.classList.add('active');
+      btnCityPorto.classList.remove('active');
+      calcCity = 'Lleida';
+      applyCityDefaults();
+    });
+
+    // Listeners for Housing Selection
+    btnHousingStudio.addEventListener('click', () => {
+      btnHousingStudio.classList.add('active');
+      btnHousingShared.classList.remove('active');
+      calcHousing = 'studio';
+      applyHousingDefaults();
+    });
+    btnHousingShared.addEventListener('click', () => {
+      btnHousingShared.classList.add('active');
+      btnHousingStudio.classList.remove('active');
+      calcHousing = 'shared';
+      applyHousingDefaults();
+    });
+
+    // Slider change events
+    [sliderRent, sliderGroceries, sliderUtilities, sliderClimbing, sliderTransport].forEach(slider => {
+      slider.addEventListener('input', updateCalculatorOutputs);
+    });
+
+    chkSocial.addEventListener('change', updateCalculatorOutputs);
+
+    // Initial run
+    applyCityDefaults();
+  }
+
+  function applyCityDefaults() {
+    const sliderRent = document.getElementById('slider-rent');
+    const sliderUtilities = document.getElementById('slider-utilities');
+    const sliderClimbing = document.getElementById('slider-climbing');
+    const sliderTransport = document.getElementById('slider-transport');
+
+    if (calcCity === 'Porto') {
+      if (calcHousing === 'studio') {
+        sliderRent.min = 550; sliderRent.max = 1000; sliderRent.value = 750;
+      } else {
+        sliderRent.min = 300; sliderRent.max = 600; sliderRent.value = 450;
+      }
+      sliderUtilities.value = 150;
+      sliderClimbing.value = 45;
+      sliderTransport.value = 35;
+    } else { // Lleida
+      if (calcHousing === 'studio') {
+        sliderRent.min = 350; sliderRent.max = 500; sliderRent.value = 400;
+      } else {
+        sliderRent.min = 200; sliderRent.max = 380; sliderRent.value = 285;
+      }
+      sliderUtilities.value = 90;
+      sliderClimbing.value = 40;
+      sliderTransport.value = 15;
+    }
+
+    updateCalculatorOutputs();
+  }
+
+  function applyHousingDefaults() {
+    const sliderRent = document.getElementById('slider-rent');
+    if (calcCity === 'Porto') {
+      if (calcHousing === 'studio') {
+        sliderRent.min = 550; sliderRent.max = 1000; sliderRent.value = 750;
+      } else {
+        sliderRent.min = 300; sliderRent.max = 600; sliderRent.value = 450;
+      }
+    } else { // Lleida
+      if (calcHousing === 'studio') {
+        sliderRent.min = 350; sliderRent.max = 500; sliderRent.value = 400;
+      } else {
+        sliderRent.min = 200; sliderRent.max = 380; sliderRent.value = 285;
+      }
+    }
+    updateCalculatorOutputs();
+  }
+
+  function updateCalculatorOutputs() {
+    const sliderRent = document.getElementById('slider-rent');
+    const sliderGroceries = document.getElementById('slider-groceries');
+    const sliderUtilities = document.getElementById('slider-utilities');
+    const sliderClimbing = document.getElementById('slider-climbing');
+    const sliderTransport = document.getElementById('slider-transport');
+    const chkSocial = document.getElementById('chk-social-grant');
+
+    const rent = parseInt(sliderRent.value);
+    const groceries = parseInt(sliderGroceries.value);
+    const utilities = parseInt(sliderUtilities.value);
+    const climbing = parseInt(sliderClimbing.value);
+    const transport = parseInt(sliderTransport.value);
+
+    // Update Slider text
+    document.getElementById('slider-rent-val').textContent = `€${rent}`;
+    document.getElementById('slider-groceries-val').textContent = `€${groceries}`;
+    document.getElementById('slider-utilities-val').textContent = `€${utilities}`;
+    document.getElementById('slider-climbing-val').textContent = `€${climbing}`;
+    document.getElementById('slider-transport-val').textContent = `€${transport}`;
+
+    // Calculations
+    const totalExpenses = rent + groceries + utilities + climbing + transport;
+    let baseGrant = 600;
+    if (chkSocial.checked) {
+      baseGrant += 250;
+    }
+
+    const netBalance = baseGrant - totalExpenses;
+    const coveragePct = Math.round((baseGrant / totalExpenses) * 100);
+
+    // Update fields
+    document.getElementById('calc-expenses-total').textContent = `€${totalExpenses}`;
+    document.getElementById('calc-grant-total').textContent = `+€${baseGrant}`;
+    
+    const balanceDiv = document.getElementById('calc-net-balance');
+    const badgeDiv = document.getElementById('calc-balance-badge');
+    const progressBar = document.getElementById('calc-coverage-bar');
+    const progressText = document.getElementById('calc-coverage-pct');
+
+    balanceDiv.textContent = `${netBalance >= 0 ? '+' : ''}€${netBalance}`;
+    
+    if (netBalance >= 0) {
+      balanceDiv.style.color = '#6ee7b7'; // Green
+      badgeDiv.textContent = 'Surplus';
+      badgeDiv.style.background = 'rgba(16, 185, 129, 0.1)';
+      badgeDiv.style.color = '#10b981';
+      badgeDiv.style.borderColor = 'rgba(16, 185, 129, 0.2)';
+    } else {
+      balanceDiv.style.color = 'var(--accent-magenta)'; // Magenta/Red
+      badgeDiv.textContent = 'Deficit';
+      badgeDiv.style.background = 'rgba(239, 68, 68, 0.1)';
+      badgeDiv.style.color = 'var(--accent-magenta)';
+      badgeDiv.style.borderColor = 'rgba(239, 68, 68, 0.2)';
+    }
+
+    progressText.textContent = `${coveragePct}%`;
+    progressBar.style.width = `${Math.min(coveragePct, 100)}%`;
+    if (coveragePct >= 100) {
+      progressBar.style.background = 'linear-gradient(90deg, #10b981, #6ee7b7)';
+    } else {
+      progressBar.style.background = 'linear-gradient(90deg, var(--accent-blue), var(--accent-cyan))';
+    }
+  }
+
+  // ----------------------------------------------------
+  // Application Checklist Storage Logic
+  // ----------------------------------------------------
+  function initChecklist() {
+    const taskCheckboxes = document.querySelectorAll('.chk-task');
+    
+    // Load state
+    taskCheckboxes.forEach(chk => {
+      const savedState = localStorage.getItem(chk.id);
+      if (savedState === 'checked') {
+        chk.checked = true;
+        chk.parentElement.style.opacity = '0.6';
+        chk.parentElement.style.textDecoration = 'line-through';
+      }
+      
+      // Toggle listener
+      chk.addEventListener('change', () => {
+        if (chk.checked) {
+          localStorage.setItem(chk.id, 'checked');
+          chk.parentElement.style.opacity = '0.6';
+          chk.parentElement.style.textDecoration = 'line-through';
+        } else {
+          localStorage.removeItem(chk.id);
+          chk.parentElement.style.opacity = '1';
+          chk.parentElement.style.textDecoration = 'none';
+        }
+      });
+    });
+  }
+
+  // ----------------------------------------------------
   // HTML5 Canvas Spacetime Gravity Simulator
   // ----------------------------------------------------
   const canvas = document.getElementById('gravity-canvas');
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas ? canvas.getContext('2d') : null;
   
   let masses = [];
   let particles = [];
@@ -365,167 +588,156 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnPositive = document.getElementById('mode-positive');
   const btnNegative = document.getElementById('mode-negative');
   const btnParticle = document.getElementById('mode-particle');
-  const btnWarp = document.getElementById('mode-warp');
   const btnClear = document.getElementById('btn-clear-sim');
   const btnToggleWarp = document.getElementById('btn-toggle-warp');
   
-  // Setup Placements Modes
-  btnPositive.addEventListener('click', () => setPlacementMode('positive'));
-  btnNegative.addEventListener('click', () => setPlacementMode('negative'));
-  btnParticle.addEventListener('click', () => setPlacementMode('particle'));
-  btnWarp.addEventListener('click', () => setPlacementMode('warp'));
-  
-  btnClear.addEventListener('click', () => {
-    masses = [];
-    particles = [];
-    isWarpBubbleActive = false;
-    btnToggleWarp.textContent = "Start Warp Drive (Alcubierre)";
-    btnToggleWarp.classList.remove('active');
-    updateSimStatus();
-  });
-  
-  btnToggleWarp.addEventListener('click', () => {
-    isWarpBubbleActive = !isWarpBubbleActive;
-    if (isWarpBubbleActive) {
-      btnToggleWarp.textContent = "Collapse Warp Bubble";
-      btnToggleWarp.classList.add('active');
-      setPlacementMode('warp');
-      
-      // Auto-place craft in center
-      warpCraft.x = canvas.width / 2;
-      warpCraft.y = canvas.height / 2;
-      warpCraft.targetX = warpCraft.x;
-      warpCraft.targetY = warpCraft.y;
-    } else {
+  if (canvas && btnPositive) {
+    // Setup Placements Modes
+    btnPositive.addEventListener('click', () => setPlacementMode('positive'));
+    btnNegative.addEventListener('click', () => setPlacementMode('negative'));
+    btnParticle.addEventListener('click', () => setPlacementMode('particle'));
+    
+    btnClear.addEventListener('click', () => {
+      masses = [];
+      particles = [];
+      isWarpBubbleActive = false;
       btnToggleWarp.textContent = "Start Warp Drive (Alcubierre)";
       btnToggleWarp.classList.remove('active');
-      setPlacementMode('positive');
-    }
-    updateSimStatus();
-  });
+      updateSimStatus();
+    });
+    
+    btnToggleWarp.addEventListener('click', () => {
+      isWarpBubbleActive = !isWarpBubbleActive;
+      if (isWarpBubbleActive) {
+        btnToggleWarp.textContent = "Collapse Warp Bubble";
+        btnToggleWarp.classList.add('active');
+        setPlacementMode('warp');
+        
+        // Auto-place craft in center
+        warpCraft.x = canvas.width / 2;
+        warpCraft.y = canvas.height / 2;
+        warpCraft.targetX = warpCraft.x;
+        warpCraft.targetY = warpCraft.y;
+      } else {
+        btnToggleWarp.textContent = "Start Warp Drive (Alcubierre)";
+        btnToggleWarp.classList.remove('active');
+        setPlacementMode('positive');
+      }
+      updateSimStatus();
+    });
+  }
   
   function setPlacementMode(mode) {
     placementMode = mode;
     
-    // Update Button Classes
     btnPositive.classList.remove('active');
     btnNegative.classList.remove('active');
     btnParticle.classList.remove('active');
-    btnWarp.classList.remove('active');
     
     if (mode === 'positive') btnPositive.classList.add('active');
     if (mode === 'negative') btnNegative.classList.add('active');
     if (mode === 'particle') btnParticle.classList.add('active');
-    if (mode === 'warp') btnWarp.classList.add('active');
   }
   
   function updateSimStatus() {
-    document.getElementById('mass-count').textContent = masses.length;
-    document.getElementById('particle-count').textContent = particles.length;
-    document.getElementById('warp-status').textContent = isWarpBubbleActive ? "Active (Alcubierre Metric)" : "Inactive";
+    const mcEl = document.getElementById('mass-count');
+    const pcEl = document.getElementById('particle-count');
+    const wsEl = document.getElementById('warp-status');
+    
+    if (mcEl) mcEl.textContent = masses.length;
+    if (pcEl) pcEl.textContent = particles.length;
+    if (wsEl) wsEl.textContent = isWarpBubbleActive ? "Active (Alcubierre)" : "Inactive";
   }
 
   // Handle Canvas Resizing
   function resizeCanvas() {
+    if (!canvas) return;
     const rect = canvas.parentElement.getBoundingClientRect();
     canvas.width = rect.width;
     canvas.height = rect.width * 0.625; // Keep 16:10 aspect ratio
   }
   
-  window.addEventListener('resize', resizeCanvas);
-  
-  // Interactive Mass/Particle placement via click
-  canvas.addEventListener('mousedown', (e) => {
-    const rect = canvas.getBoundingClientRect();
-    // Translate click to local canvas coordinates
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
-    const clickX = (e.clientX - rect.left) * scaleX;
-    const clickY = (e.clientY - rect.top) * scaleY;
+  if (canvas) {
+    window.addEventListener('resize', resizeCanvas);
     
-    // Check if clicked close to an existing mass to delete it
-    let clickedMassIdx = -1;
-    masses.forEach((m, idx) => {
-      let dx = m.x - clickX;
-      let dy = m.y - clickY;
-      if (Math.sqrt(dx*dx + dy*dy) < 20) {
-        clickedMassIdx = idx;
-      }
-    });
-    
-    if (clickedMassIdx !== -1) {
-      masses.splice(clickedMassIdx, 1);
-      updateSimStatus();
-      return;
-    }
-    
-    // Perform Mode Placement
-    if (placementMode === 'positive') {
-      masses.push({ x: clickX, y: clickY, mass: 60, type: 'positive', color: 'var(--accent-cyan)' });
-    } else if (placementMode === 'negative') {
-      masses.push({ x: clickX, y: clickY, mass: -60, type: 'negative', color: 'var(--accent-magenta)' });
-    } else if (placementMode === 'particle') {
-      // Spawn orbital test particle
-      particles.push({
-        x: clickX,
-        y: clickY,
-        vx: 1.5,
-        vy: -1.0,
-        trail: [],
-        color: '#ffffff'
-      });
-    } else if (placementMode === 'warp') {
-      warpCraft.targetX = clickX;
-      warpCraft.targetY = clickY;
-    }
-    
-    updateSimStatus();
-  });
-  
-  // Track Mouse movement for warp craft destination
-  canvas.addEventListener('mousemove', (e) => {
-    if (placementMode === 'warp' || isWarpBubbleActive) {
+    // Interactive Mass/Particle placement via click
+    canvas.addEventListener('mousedown', (e) => {
       const rect = canvas.getBoundingClientRect();
       const scaleX = canvas.width / rect.width;
       const scaleY = canvas.height / rect.height;
-      warpCraft.targetX = (e.clientX - rect.left) * scaleX;
-      warpCraft.targetY = (e.clientY - rect.top) * scaleY;
-    }
-  });
+      const clickX = (e.clientX - rect.left) * scaleX;
+      const clickY = (e.clientY - rect.top) * scaleY;
+      
+      let clickedMassIdx = -1;
+      masses.forEach((m, idx) => {
+        let dx = m.x - clickX;
+        let dy = m.y - clickY;
+        if (Math.sqrt(dx*dx + dy*dy) < 20) {
+          clickedMassIdx = idx;
+        }
+      });
+      
+      if (clickedMassIdx !== -1) {
+        masses.splice(clickedMassIdx, 1);
+        updateSimStatus();
+        return;
+      }
+      
+      if (placementMode === 'positive') {
+        masses.push({ x: clickX, y: clickY, mass: 60, type: 'positive', color: 'var(--accent-cyan)' });
+      } else if (placementMode === 'negative') {
+        masses.push({ x: clickX, y: clickY, mass: -60, type: 'negative', color: 'var(--accent-magenta)' });
+      } else if (placementMode === 'particle') {
+        particles.push({
+          x: clickX,
+          y: clickY,
+          vx: 1.5,
+          vy: -1.0,
+          trail: [],
+          color: '#ffffff'
+        });
+      } else if (placementMode === 'warp') {
+        warpCraft.targetX = clickX;
+        warpCraft.targetY = clickY;
+      }
+      
+      updateSimStatus();
+    });
+    
+    canvas.addEventListener('mousemove', (e) => {
+      if (placementMode === 'warp' || isWarpBubbleActive) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        warpCraft.targetX = (e.clientX - rect.left) * scaleX;
+        warpCraft.targetY = (e.clientY - rect.top) * scaleY;
+      }
+    });
+  }
 
-  // Calculate spacetime warping for any point (x, y)
   function getWarpedPoint(x, y) {
     let dxTotal = 0;
     let dyTotal = 0;
     
-    // Standard Masses Curve
     masses.forEach(m => {
       let dx = m.x - x;
       let dy = m.y - y;
       let dist = Math.sqrt(dx*dx + dy*dy);
       
       if (dist > 15) {
-        // Force calculations (attractive for +, repulsive for -)
         let force = m.mass / (dist + 40); 
         let factor = Math.min(Math.abs(force) * 35, dist * 0.85);
-        
         dxTotal += (dx / dist) * factor * (m.mass > 0 ? 1 : -1);
         dyTotal += (dy / dist) * factor * (m.mass > 0 ? 1 : -1);
       }
     });
     
-    // Alcubierre Warp Metric Bubble effect
     if (isWarpBubbleActive) {
       let dx = warpCraft.x - x;
       let dy = warpCraft.y - y;
       let dist = Math.sqrt(dx*dx + dy*dy);
       
       if (dist < warpCraft.bubbleRadius) {
-        // Inside warp bubble, spacetime is warped dynamically.
-        // Ahead of craft (in direction of movement) space is contracted (positive mass effect)
-        // Behind craft, space is expanded (negative mass effect)
-        
-        // Let's compute travel vector
         let tx = warpCraft.targetX - warpCraft.x;
         let ty = warpCraft.targetY - warpCraft.y;
         let tDist = Math.sqrt(tx*tx + ty*ty);
@@ -533,21 +745,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tDist > 2) {
           let dirX = tx / tDist;
           let dirY = ty / tDist;
-          
-          // Project the point relative to craft coordinate frame
-          // Dot product: how far along the craft movement is this point
           let projection = dx * dirX + dy * dirY; 
-          
-          // Ahead if projection < 0 (pointing in direction of dirX/dirY)
-          let warpFactor = Math.sin((dist / warpCraft.bubbleRadius) * Math.PI); // Strongest in center of bubble wall
+          let warpFactor = Math.sin((dist / warpCraft.bubbleRadius) * Math.PI);
           let intensity = 25 * warpFactor;
           
           if (projection < 0) {
-            // Contracting space in front
             dxTotal += dirX * intensity;
             dyTotal += dirY * intensity;
           } else {
-            // Expanding space behind
             dxTotal -= dirX * intensity;
             dyTotal -= dirY * intensity;
           }
@@ -558,13 +763,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return { x: x + dxTotal, y: y + dyTotal };
   }
 
-  // Particle System Update Loop
   function updateParticles() {
     particles.forEach((p, idx) => {
       let ax = 0;
       let ay = 0;
       
-      // Forces from placed masses
       masses.forEach(m => {
         let dx = m.x - p.x;
         let dy = m.y - p.y;
@@ -572,29 +775,22 @@ document.addEventListener('DOMContentLoaded', () => {
         let dist = Math.sqrt(distSqr);
         
         if (dist > 10) {
-          // Accel = G*M/r^2 (mass can be negative, which repels)
           let strength = m.mass * 2.0;
           ax += (dx / dist) * (strength / (distSqr + 100));
           ay += (dy / dist) * (strength / (distSqr + 100));
         }
       });
       
-      // Update Physics
       p.vx += ax;
       p.vy += ay;
-      
-      // Apply slight cosmic drag to keep orbits stabilized
       p.vx *= 0.998;
       p.vy *= 0.998;
-      
       p.x += p.vx;
       p.y += p.vy;
       
-      // Record trail
       p.trail.push({ x: p.x, y: p.y });
       if (p.trail.length > 30) p.trail.shift();
       
-      // Out of bounds cleanup
       if (p.x < -100 || p.x > canvas.width + 100 || p.y < -100 || p.y > canvas.height + 100) {
         particles.splice(idx, 1);
         updateSimStatus();
@@ -602,18 +798,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Draw everything
   function drawSimulator() {
+    if (!ctx) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    // Draw Spacetime Grid
     ctx.strokeStyle = 'rgba(59, 130, 246, 0.15)';
     ctx.lineWidth = 1;
     
     const gridSpacing = 28;
     const lineSegments = 16;
     
-    // Draw Vertical Grid Lines
     for (let x = 0; x < canvas.width; x += gridSpacing) {
       ctx.beginPath();
       for (let i = 0; i <= lineSegments; i++) {
@@ -625,7 +819,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.stroke();
     }
     
-    // Draw Horizontal Grid Lines
     for (let y = 0; y < canvas.height; y += gridSpacing) {
       ctx.beginPath();
       for (let i = 0; i <= lineSegments; i++) {
@@ -637,7 +830,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.stroke();
     }
     
-    // Draw Placed Masses with glowing gradients
     masses.forEach(m => {
       let radGrd = ctx.createRadialGradient(m.x, m.y, 2, m.x, m.y, 24);
       if (m.type === 'positive') {
@@ -658,7 +850,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.fill();
     });
     
-    // Draw Test Particles and trails
     particles.forEach(p => {
       if (p.trail.length > 1) {
         ctx.beginPath();
@@ -677,16 +868,13 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.beginPath();
       ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
       ctx.fill();
-      ctx.shadowBlur = 0; // reset glow
+      ctx.shadowBlur = 0;
     });
     
-    // Update and Draw Alcubierre Warp Spacecraft
     if (isWarpBubbleActive) {
-      // Linear interpolate craft position toward mouse target
       warpCraft.x += (warpCraft.targetX - warpCraft.x) * 0.08;
       warpCraft.y += (warpCraft.targetY - warpCraft.y) * 0.08;
       
-      // Draw Warp Bubble ring
       ctx.beginPath();
       let ringGrd = ctx.createRadialGradient(warpCraft.x, warpCraft.y, warpCraft.bubbleRadius - 8, warpCraft.x, warpCraft.y, warpCraft.bubbleRadius + 4);
       ringGrd.addColorStop(0, 'rgba(139, 92, 246, 0)');
@@ -698,13 +886,11 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.arc(warpCraft.x, warpCraft.y, warpCraft.bubbleRadius + 4, 0, Math.PI * 2);
       ctx.fill();
       
-      // Draw Spacecraft Icon
       ctx.fillStyle = '#ffffff';
       ctx.shadowBlur = 10;
       ctx.shadowColor = 'var(--accent-cyan)';
       
       ctx.beginPath();
-      // Draw a triangle ship pointing toward movement
       let tx = warpCraft.targetX - warpCraft.x;
       let ty = warpCraft.targetY - warpCraft.y;
       let angle = Math.atan2(ty, tx);
@@ -712,7 +898,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.save();
       ctx.translate(warpCraft.x, warpCraft.y);
       ctx.rotate(angle);
-      
       ctx.moveTo(12, 0);
       ctx.lineTo(-8, -8);
       ctx.lineTo(-4, 0);
@@ -725,7 +910,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Main Loop
   function simLoop() {
     updateParticles();
     drawSimulator();
@@ -733,6 +917,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   function initSimulator() {
+    if (!canvas) return;
     if (animationFrameId) cancelAnimationFrame(animationFrameId);
     resizeCanvas();
     updateSimStatus();

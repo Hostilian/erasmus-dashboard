@@ -1,96 +1,137 @@
 {
-  "general_relativity": {
-    "title": "Gravity in General Relativity",
-    "summary": "In Albert Einstein's 1915 theory of General Relativity, gravity is not a Newtonian force pulling objects, but rather the geometric curvature of four-dimensional spacetime caused by mass and energy distribution.",
+  "academics": {
+    "title": "Academic Mapping & Coordinator Approvals",
+    "summary": "Academic fit is the first blocker. Universidade Portucalense (UPT) offers a direct, hassle-free 100% course mapping in English. Universitat de Lleida (UdL) offers great courses but requires coordinator-approved substitutions for two subjects.",
     "key_principles": [
       {
-        "name": "Equivalence Principle",
-        "description": "The gravitational force experienced locally while standing on a massive body is identical to the pseudo-force experienced by an observer in an accelerated frame of reference."
+        "name": "UPT Porto Alignment",
+        "description": "All 4 courses are taught in the 1st semester (Winter) under Informatics Engineering and General Accounting. High English support. No substitutions required."
       },
       {
-        "name": "Spacetime Curvature",
-        "description": "Mass and energy tell spacetime how to curve, and curved spacetime tells mass how to move (expressed by John Wheeler's famous summary)."
+        "name": "UdL Lleida Alignment",
+        "description": "Web Design and Statistics are Spring-only in UdL's main Computer Science degree. Winter alternatives are available: Web dinàmica (Digital Design dept) and Estadística Avançada (FDET Business dept). Requires approvals."
       },
       {
-        "name": "Einstein Field Equations",
-        "description": "Ten coupled hyperbolic partial differential equations relating the local spacetime geometry (Einstein tensor) to the local matter-energy distribution (Stress-energy tensor)."
+        "name": "ECTS Equivalency",
+        "description": "ECTS credits are fully transferable 1:1 to CZU Prague. UdL's Operating Systems is a heavy 9 ECTS course, whereas UPT's is 6 ECTS."
       }
     ],
-    "limits_on_antigravity": "Because all known forms of mass and energy have positive values, the stress-energy tensor produces attractive curvature. Without negative mass-energy, a repulsive gravitational field (antigravity) is impossible within classical General Relativity."
+    "limits_on_antigravity": "Learning Agreements must be signed by the CZU PEF coordinator (Veronika Brecklová) and the host coordinator (UPT: erasmus+_dct@upt.pt, UdL: Prof. Álvaro de Gracia eps.international@udl.cat) before departure."
   },
-  "quantum_gravity": {
-    "title": "The Quest for Quantum Gravity",
-    "summary": "Quantum Gravity (QG) is a theoretical physics field attempting to unify General Relativity (which describes gravity at macroscopic scales) with Quantum Mechanics (which describes the other three fundamental forces at subatomic scales).",
+  "finances": {
+    "title": "Erasmus+ Grants & Work Rights",
+    "summary": "Financial support is identical from CZU, but the cost of living differences between Porto and Lleida create a major divergence in your net monthly balance.",
     "candidate_theories": [
       {
-        "name": "String Theory / M-Theory",
-        "description": "Replaces zero-dimensional point particles with one-dimensional vibrating strings. Gravity emerges naturally from the vibration of a closed string state called the graviton."
+        "name": "Erasmus+ Grant Rate",
+        "description": "Both Spain and Portugal are Group B countries. CZU pays a base study grant of €600 per month."
       },
       {
-        "name": "Loop Quantum Gravity (LQG)",
-        "description": "A non-perturbative, background-independent formulation that quantizes spacetime itself into discrete loops/nodes of area and volume (spin networks)."
+        "name": "Green Travel Top-Up",
+        "description": "€50 one-time top-up for environmentally friendly travel (e.g. taking the train Prague -> Munich -> Paris -> Barcelona/Lleida) plus up to 4 days of daily grant."
       },
       {
-        "name": "Asymptotic Safety & Emergent Gravity",
-        "description": "Suggests that gravity may be a non-perturbatively renormalizable quantum field theory, or an emergent thermodynamic property rather than a fundamental force."
+        "name": "Fewer Opportunities",
+        "description": "An additional €250 per month top-up is available for students qualifying under the Fewer Opportunities criteria (e.g., specific social, health, or economic barriers)."
       }
     ],
     "challenges": [
-      "Renormalizability: Quantum field theory treatments of General Relativity produce infinities that cannot be cancelled out using standard renormalization techniques.",
-      "Experimental Constraints: The Planck length (1.6 x 10^-35 meters) is so incredibly small that direct experimental probes require energy scales far beyond current or future particle accelerator capabilities."
+      "Lleida (Studio vs. Shared): A studio costs €756-1010/mo (net -€156 to -€410 after grant), while a shared flat costs €518-840/mo (net +€82 to -€240). Sharing in Lleida is highly sustainable.",
+      "Porto (Studio vs. Shared): A studio costs €1000-1460/mo (net -€400 to -€860), while a shared flat costs €630-1090/mo (net -€30 to -€490). Porto requires substantial personal savings.",
+      "Spanish Work Rights: Non-EU students in Spain can work up to 30 hours per week under Royal Decree 1155/2024. Job search is automatic.",
+      "Portuguese Work Rights: Non-EU students in Portugal can work up to 20 hours per week during the semester, and full-time during holidays.",
+      "Remote Work & Social Security: To work remotely for a Czech employer, you remain a Czech tax resident (<183 days), but your employer must apply for a temporary A1 certificate to avoid foreign social security liabilities."
     ]
   },
-  "warp_mechanics": {
-    "title": "Theoretical Warp Mechanics & Alcubierre Drive",
-    "summary": "Proposed by physicist Miguel Alcubierre in 1994, the Alcubierre metric allows for theoretical faster-than-light (FTL) transit by warping space around a vessel.",
-    "mechanism": "The drive contracts spacetime in front of the spacecraft and expands it behind. The vessel rests inside a 'warp bubble' of flat spacetime, meaning it does not locally exceed the speed of light or experience time dilation.",
+  "visa": {
+    "title": "Directive 2016/801 Student Mobility",
+    "summary": "As a Turkish citizen holding a valid Czech student residence permit, you are protected under EU Directive 2016/801 for intra-EU mobility. You do not need a new student visa, but notification is mandatory.",
+    "mechanism": "The host university's International Relations Office (ORI) must submit a formal mobility notification to the immigration authorities at least 1 month prior to arrival. If this is missed or late, your entry could be deemed illegal.",
     "exotic_matter": {
-      "explanation": "To warp spacetime in a way that contracts it in front and expands it behind, the stress-energy tensor requires negative energy density.",
-      "status": "Negative energy density is theoretically possible at microscopic scales (e.g., Casimir effect, quantum fluctuations), but there is no proof that macroscopic negative mass or negative energy can be created or stabilized."
+      "explanation": "For Spain, the UdL ORI notifies the Delegación del Gobierno en Cataluña. For Portugal, UPT notifies AIMA (Agency for Integration, Migration and Asylum).",
+      "status": "You must supply: passport scan, valid Czech residence permit, signed Learning Agreement, health insurance, and proof of financial means."
     },
     "limitations": [
-      "Energy Requirements: Early models required energy equivalent to the mass of the entire universe. Later refinements lowered this to the mass of Jupiter, which is still astronomically out of reach.",
-      "Horizon Problem: The front of the warp bubble is causally disconnected from the spaceship, meaning crew members cannot send control signals to turn the drive off.",
-      "Radiation Accumulation: Particles swept up by the bubble would accumulate at high energies and release a devastating blast of radiation upon deceleration."
+      "Spain: Processing takes up to 30 days. No news after 30 days represents administrative approval (silence is positive).",
+      "Portugal: Upon arrival, you must register your presence with AIMA/police within 30 days.",
+      "Czech Republic: Your Czech residence permit must remain valid for the entire duration of your Erasmus exchange. Do not let it expire!",
+      "Cyprus (Ruled Out): Non-Schengen. Turkish passport holders are explicitly excluded from visa-free entry with a Schengen permit. A national visa is mandatory but highly restricted."
     ]
   },
-  "debunked_pseudoscience": {
-    "title": "Pseudoscience & Misunderstood Phenomena",
+  "housing": {
+    "title": "Student Housing & Pet-Friendly Leases",
+    "summary": "Securing accommodation is a major challenge, especially when traveling with a cat. Tenancy laws in both Spain and Portugal permit landlords to ban pets.",
     "items": [
       {
-        "name": "Biefeld-Brown Effect & Ionocrafts",
-        "claim": "Asymmetric capacitors subjected to tens of kilovolts produce a net force that was claimed by Thomas Townsend Brown to be an electrogravitic (antigravity) force coupling electricity and gravity.",
-        "scientific_fact": "The force is entirely due to electrohydrodynamics (EHD) or 'ion wind.' High voltages ionize air molecules near the sharp emitter wire. These ions are accelerated by the electric field toward the flat collector plate, colliding with neutral air molecules and generating aerodynamic thrust.",
-        "proof_of_debunk": "Asymmetric capacitors do not produce any thrust when placed in a high vacuum, proving the thrust is dependent on the ambient atmosphere as a propellant, not gravity manipulation."
+        "name": "Porto Housing Market",
+        "claim": "UPT does not own or operate official student dorms. Students must rent in the private market using platforms like Uniplaces, Spotahome, or Idealista.",
+        "scientific_fact": "Average rents for T0 studios are €600-900/mo, and shared rooms are €300-600/mo. Best neighborhoods: Bonfim, Paranhos, Cedofeita, Baixa.",
+        "proof_of_debunk": "Pet negotiation is difficult. Portuguese law allows landlords to insert a strict 'no-pets' clause in private contracts. If the contract is silent, you can keep a pet."
       },
       {
-        "name": "Magnetic Levitation (Maglev)",
-        "claim": "Superconducting or electromagnetic levitation represents antigravity because objects float in mid-air.",
-        "scientific_fact": "Magnetic levitation is purely electromagnetic. It uses opposing magnetic fields (via electromagnetism or Lenz's law/Meissner effect in superconductors) to apply an upward force that counteracts the downward force of gravity. Spacetime curvature remains unchanged.",
-        "proof_of_debunk": "The gravitational force on the levitating object is completely unchanged; the object is simply suspended by mechanical electromagnetic stress, similar to a book resting on a table."
+        "name": "Lleida Housing Market",
+        "claim": "UdL recommends residencias like La Vila de Lleida (prices start at €316/mo) and private shared flats.",
+        "scientific_fact": "Shared flat rooms are €200-350/mo, and private T0 studios are €360-450/mo. Best neighborhoods: Cappont (near EPS campus and Boulder Indoor gym).",
+        "proof_of_debunk": "Under Spanish Urban Leases Law (LAU), landlords can legally ban pets. You must seek written confirmation or ensure the lease has no pet prohibition clause."
+      }
+    ]
+  },
+  "pet_travel": {
+    "title": "Pet Travel Logistics (Prague to Destination)",
+    "summary": "Relocating your cat requires meeting EU veterinary requirements and choosing the right transport logistics to manage weight limits.",
+    "items": [
+      {
+        "name": "Veterinary Compliance Timeline",
+        "claim": "Cat must be microchipped, vaccinated for rabies, and issued an EU Pet Passport.",
+        "scientific_fact": "Microchip must be ISO 11784/11785. The rabies vaccine must be given AFTER the microchip. You must wait at least 21 days after the rabies vaccine before traveling.",
+        "proof_of_debunk": "An EU Pet Passport can be issued by any authorized Prague vet clinic. No rabies antibody titer test is needed for travel within Spain/Portugal."
+      },
+      {
+        "name": "Airline Choice & Cabin Limits",
+        "claim": "Vueling (Prague -> Barcelona direct) offers a generous 10 kg limit (cat + soft carrier). TAP Portugal (Prague -> Porto direct) has a strict 8 kg limit.",
+        "scientific_fact": "Vueling soft carrier size: 45 x 39 x 21 cm. TAP soft carrier size: 45 x 30 x 23 cm. TAP strictly weighs the pet and carrier at check-in.",
+        "proof_of_debunk": "For Lleida: Fly Vueling to Barcelona (BCN), then take the high-speed Renfe/AVE train to Lleida-Pirineus (1h 15m, carrier allowed). For Porto: Fly TAP or Lufthansa direct."
+      }
+    ]
+  },
+  "climbing": {
+    "title": "Bouldering & Outdoor Climbing Scene",
+    "summary": "Porto is an indoor-focused bouldering city, whereas Lleida is a world-class outdoor climbing capital. Your lifestyle quality will differ significantly.",
+    "items": [
+      {
+        "name": "Porto Gyms & Crags",
+        "claim": "Porto has active indoor gyms but very limited outdoor climbing nearby.",
+        "scientific_fact": "São Rock Climbing (near Campanhã station, €5 entry with ESN card) and Proa Climbing Center (€50/mo for students) offer great routes. The North Wall is accessible via Urban Sports Club.",
+        "proof_of_debunk": "Outdoor crags are scarce. You will need to drive 1.5+ hours north to Braga or east to Serra da Estrela for real rock."
+      },
+      {
+        "name": "Lleida Gyms & Crags",
+        "claim": "Lleida is a world-famous sport climbing hub with excellent, cheap indoor training.",
+        "scientific_fact": "Boulder Indoor Lleida (Carrer de Tèrmens, 3) is a massive 1,700 m² gym costing just €44.50/mo for students. Fanatic is another local bouldering wall.",
+        "proof_of_debunk": "Outdoor crags: Santa Linya, Oliana, Camarasa, and El Cogul (bouldering) are within 30-45 mins drive. Margalef and Siurana are within 60 mins. Carpooling (Blablacar) or active local groups are key."
       }
     ]
   },
   "literature": [
     {
-      "citation": "Alcubierre, M. (1994). 'The warp drive: hyper-fast travel within general relativity.' Classical and Quantum Gravity, 11(5), L73.",
-      "type": "Journal Article",
-      "topic": "Warp Mechanics"
+      "citation": "EU Directive 2016/801 on the conditions of entry and residence of third-country nationals for the purposes of research, studies, training, voluntary service, pupil exchange schemes or educational projects.",
+      "type": "Immigration Directive",
+      "topic": "Intra-EU Mobility"
     },
     {
-      "citation": "Alekseer, G. A., & Landsberg, G. S. (2001). 'Electrogravitic Effects and Asymmetric Capacitors.' Physics-Uspekhi.",
-      "type": "Review Paper",
-      "topic": "Biefeld-Brown Effect"
+      "citation": "Spanish Royal Decree 1155/2024 amending the Regulation of Organic Law 4/2000 on the rights and freedoms of foreigners in Spain and their social integration (30-hour student work rule).",
+      "type": "Government Decree",
+      "topic": "Student Work Rights"
     },
     {
-      "citation": "CERN ALPHA Collaboration (2023). 'Observation of the effect of gravity on motion of antimatter.' Nature, 621, 716–722.",
-      "type": "Experimental Paper",
-      "topic": "Antimatter Gravity"
+      "citation": "Portuguese Decree-Law no. 14/2021 amending the Legal Regime of Entry, Stay, Exit and Expulsion of Foreigners from National Territory (20-hour work limit for students).",
+      "type": "Government Law",
+      "topic": "Student Work Rights"
     },
     {
-      "citation": "Hartle, J. B. (2003). 'Gravity: An Introduction to Einstein's General Relativity.' Addison-Wesley.",
-      "type": "Textbook",
-      "topic": "General Relativity"
+      "citation": "Regulation (EU) No 576/2013 on the non-commercial movement of pet animals and repealing Regulation (EC) No 998/2003 (Microchip and Rabies requirements).",
+      "type": "EU Regulation",
+      "topic": "Pet Relocation"
     }
   ]
 }

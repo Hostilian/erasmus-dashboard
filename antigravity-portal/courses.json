@@ -1,131 +1,242 @@
 [
   {
-    "id": "math-methods",
-    "code": "PHYS 4010",
-    "title": "Mathematical Methods for Physicists",
-    "subject": "Applied Mathematics",
+    "id": "upt-so",
+    "university": "UPT Porto",
+    "code": "SO (1st Sem)",
+    "title": "Sistemas Operativos",
+    "subject": "Informatics Engineering",
     "term": "Winter Semester",
-    "credits": 4,
-    "description": "Essential mathematical tools for advanced physics. Focuses on vector spaces, differential equations, complex analysis, tensor analysis, and boundary value problems.",
-    "prerequisites": ["Multivariable Calculus", "Linear Algebra"],
+    "ects": 6,
+    "description": "Introduction to operating systems. Covers process management, CPU scheduling, memory allocation, virtual memory, concurrency, file systems, and shell programming.",
+    "prerequisites": [],
     "syllabus_topics": [
-      "Vector spaces and curvilinear coordinate systems",
-      "Partial differential equations and boundary conditions",
-      "Introduction to tensor analysis and differential forms",
-      "Complex variables and contour integration",
-      "Green's functions and Sturm-Liouville theory"
+      "Process lifecycle, states, and context switching",
+      "CPU Scheduling algorithms (FIFO, Round Robin, SJF)",
+      "Memory management, paging, and virtual memory",
+      "Concurrency, mutual exclusion, and semaphores",
+      "File systems structures and directory traversal",
+      "UNIX shell programming and terminal commands"
     ],
     "textbooks": [
-      "Mathematical Methods for Physicists by George Arfken & Hans Weber"
+      "Modern Operating Systems by Andrew S. Tanenbaum",
+      "Operating System Concepts by Silberschatz, Galvin & Gagne"
     ],
-    "relevance": "Provides the foundational tensor calculus and differential geometry mathematical tools needed to comprehend and formulate Einstein's Field Equations."
+    "relevance": "Direct equivalent to CZU Operating Systems/UNIX requirement. Instruction in English/bilingual format."
   },
   {
-    "id": "advanced-em",
-    "code": "PHYS 4100",
-    "title": "Advanced Electromagnetism",
-    "subject": "Physics",
+    "id": "upt-tw",
+    "university": "UPT Porto",
+    "code": "TW (1st Sem)",
+    "title": "Tecnologias Web",
+    "subject": "Informatics Engineering",
     "term": "Winter Semester",
-    "credits": 4,
-    "description": "A rigorous treatment of electrodynamics based on Maxwell's equations. Covers electrostatic and magnetostatic fields, electromagnetic waves, radiation, and relativistic electrodynamics.",
-    "prerequisites": ["Introductory Electromagnetism", "Differential Equations"],
+    "ects": 6,
+    "description": "Full-stack web development. Covers client-server architectures, HTML5, CSS3, JavaScript, DOM manipulation, responsive layouts, web APIs, and backend server basics.",
+    "prerequisites": [],
     "syllabus_topics": [
-      "Maxwell's equations in vacuum and matter",
-      "Electromagnetic wave propagation and waveguides",
-      "Potentials, gauge transformations (Lorenz & Coulomb gauges)",
-      "Radiation from moving charges and dipole radiation",
-      "Relativistic formulation of electrodynamics and field tensor F^uv"
+      "Client-server model and HTTP/HTTPS protocols",
+      "Semantic HTML5 structure and SEO guidelines",
+      "CSS3 styling, Flexbox, Grid layouts, and responsive design",
+      "JavaScript basics, asynchronous patterns, and fetch API",
+      "DOM manipulation, event handling, and form validation",
+      "Backend server fundamentals and database connection"
     ],
     "textbooks": [
-      "Classical Electrodynamics by John David Jackson"
+      "Eloquent JavaScript by Marijn Haverbeke",
+      "Learning Web Design by Jennifer Robbins"
     ],
-    "relevance": "Relativistic electrodynamics introduces four-vectors and the electromagnetic field tensor, serving as the bridge to Special Relativity and the study of ion wind propulsion (Biefeld-Brown)."
+    "relevance": "Direct equivalent to CZU Web Technologies requirement. Taught/supported in English."
   },
   {
-    "id": "quantum-mech",
-    "code": "PHYS 4200",
-    "title": "Quantum Mechanics I",
-    "subject": "Physics",
+    "id": "upt-ead",
+    "university": "UPT Porto",
+    "code": "EAD (1st Sem)",
+    "title": "Estatística e Análise de Dados",
+    "subject": "Informatics Engineering",
     "term": "Winter Semester",
-    "credits": 4,
-    "description": "Fundamental principles of quantum mechanics. Formulates the Schrodinger equation, wave functions, operators, angular momentum, spin, and perturbation theory.",
-    "prerequisites": ["Linear Algebra", "Classical Mechanics"],
+    "ects": 6,
+    "description": "Probability and data analysis. Focuses on descriptive statistics, probability distributions, sampling methods, parameter estimation, hypothesis testing, and linear regression.",
+    "prerequisites": [],
     "syllabus_topics": [
-      "The postulates of quantum mechanics and Hilbert spaces",
-      "One-dimensional problems (harmonic oscillator, potential wells)",
-      "Angular momentum and quantum mechanical spin",
-      "Three-dimensional systems and the hydrogen atom",
-      "Time-independent perturbation theory"
+      "Descriptive statistics and data visualization methods",
+      "Probability theory, conditional probability, and Bayes' theorem",
+      "Discrete and continuous probability distributions",
+      "Confidence intervals and hypothesis testing",
+      "Correlation analysis and linear regression modeling",
+      "Statistical software applications (R or Python)"
     ],
     "textbooks": [
-      "Introduction to Quantum Mechanics by David J. Griffiths",
-      "Principles of Quantum Mechanics by R. Shankar"
+      "Applied Statistics and Probability for Engineers by Douglas C. Montgomery",
+      "Introduction to Probability and Statistics by William Mendenhall"
     ],
-    "relevance": "Essential for understanding subatomic interactions, quantum fluctuations (Casimir effect), and the ultimate search for a unified Quantum Gravity theory."
+    "relevance": "Direct equivalent to CZU Statistics requirement. Supported in English."
   },
   {
-    "id": "fluid-dynamics",
-    "code": "AERO 4300",
-    "title": "Fluid Dynamics & Aerodynamics",
-    "subject": "Aerospace Engineering",
+    "id": "upt-cg",
+    "university": "UPT Porto",
+    "code": "CG (1st Sem)",
+    "title": "Contabilidade Geral",
+    "subject": "Economics and Management",
     "term": "Winter Semester",
-    "credits": 3,
-    "description": "Governing equations of fluid motion. Focuses on inviscid and viscous flows, incompressible and compressible flow regimes, boundary layer theory, and aerodynamic forces.",
-    "prerequisites": ["Thermodynamics", "Vector Calculus"],
+    "ects": 6,
+    "description": "General accounting systems. Covers the double-entry system, registration of business operations, general ledger recording, trial balance preparation, and financial statements.",
+    "prerequisites": [],
     "syllabus_topics": [
-      "Navier-Stokes equations derivation and conservation laws",
-      "Potential flow theory and lift generation",
-      "Viscous flow and laminar/turbulent boundary layers",
-      "One-dimensional compressible flow and shock waves",
-      "Introduction to computational fluid dynamics (CFD)"
+      "The role of accounting in organizations and accounting standards",
+      "The double-entry system and account debit/credit rules",
+      "Recording routine commercial transactions and operations",
+      "End-of-period adjustments and depreciation/amortization",
+      "Preparation of Balance Sheets and Income Statements",
+      "Financial statement analysis overview"
     ],
     "textbooks": [
-      "Fundamentals of Aerodynamics by John D. Anderson"
+      "Financial Accounting by Weygandt, Kimmel & Kieso",
+      "General Accounting Principles (Portuguese/EU Framework)"
     ],
-    "relevance": "Provides the fluid mechanics frameworks needed to analyze ionized gas flow in EHD propulsion systems (lifters) and warp-bubble fluid analogies."
+    "relevance": "Direct equivalent to CZU General Accounting requirement. Offered by the Faculty of Economics with English support."
   },
   {
-    "id": "general-relativity",
-    "code": "PHYS 5010",
-    "title": "General Relativity & Gravitation",
-    "subject": "Physics",
+    "id": "udl-so",
+    "university": "UdL Lleida",
+    "code": "SO (Winter)",
+    "title": "Sistemes Operatius",
+    "subject": "Escola Politècnica Superior (EPS)",
     "term": "Winter Semester",
-    "credits": 4,
-    "description": "A comprehensive introduction to Einstein's theory of gravitation. Establishes spacetime geometry and applies it to black holes, gravitational waves, and cosmology.",
-    "prerequisites": ["PHYS 4010 (Math Methods)", "Classical Mechanics"],
+    "ects": 9,
+    "description": "Operating systems engineering. Covers process management, CPU scheduling, memory hierarchies, virtual memory paging, input/output structures, file systems, and bash scripting.",
+    "prerequisites": [],
     "syllabus_topics": [
-      "Review of Special Relativity and flat spacetime metric",
-      "Differential geometry: manifolds, connections, curvature tensor",
-      "Derivation of the Einstein Field Equations",
-      "The Schwarzschild solution: black holes and solar system tests",
-      "Introduction to gravitational radiation and Friedmann cosmology"
+      "Process creation, synchronization, threads, and IPC",
+      "CPU Scheduling algorithms and real-time scheduling",
+      "Memory management, paging, segmentation, and swap",
+      "Concurrency, deadlocks, semaphores, and mutexes",
+      "Virtual file systems, disk layouts, and storage management",
+      "UNIX/Linux shell environments, commands, and bash scripting"
     ],
     "textbooks": [
-      "Spacetime and Geometry: An Introduction to General Relativity by Sean Carroll",
-      "Gravity: An Introduction to Einstein's General Relativity by James B. Hartle"
+      "Operating System Concepts by Silberschatz, Galvin & Gagne",
+      "Sistemes Operatius UOC/UdL Course Material"
     ],
-    "relevance": "The core course for studying gravity manipulation. Teaches how to formulate spacetime metrics, calculate energy conditions, and analyze warp metrics like the Alcubierre drive."
+    "relevance": "Direct match for CZU Operating Systems / UNIX requirement. 9 ECTS weight ensures full credit coverage."
   },
   {
-    "id": "aerospace-prop",
-    "code": "AERO 5420",
-    "title": "Advanced Aerospace Propulsion",
-    "subject": "Aerospace Engineering",
+    "id": "udl-ams",
+    "university": "UdL Lleida",
+    "code": "AMS (Winter)",
+    "title": "Administració i Manteniment de Sistemes i Aplicacions",
+    "subject": "Escola Politècnica Superior (EPS)",
     "term": "Winter Semester",
-    "credits": 3,
-    "description": "Analyzes the physics and engineering of air-breathing and rocket propulsion. Covers gas turbines, ramjets, scramjets, chemical rockets, and electric propulsion technologies.",
-    "prerequisites": ["AERO 4300 (Fluid Dynamics)", "Thermodynamics"],
+    "ects": 6,
+    "description": "UNIX systems administration. Practical management of Linux/UNIX environments, server installation, configuration of web, database, mail and DNS services, security and backups.",
+    "prerequisites": [],
     "syllabus_topics": [
-      "Thermodynamic cycle analysis of turbojets and turbofans",
-      "Combustion physics, gas turbine components, and inlets",
-      "Chemical rocket dynamics, specific impulse, and nozzles",
-      "Electric propulsion: ion thrusters, Hall thrusters, and MPD thrusters",
-      "Advanced concept propulsion (fusion, sails, warp-metrics overview)"
+      "Linux/UNIX installation, partitioning, and boot managers",
+      "User accounts, permissions, and group policy management",
+      "Configuration of network services: HTTP (Apache/Nginx), DNS, SMTP, SQL",
+      "System monitoring, performance tuning, and log analysis",
+      "Backup strategies, cron automation, and shell scripting",
+      "Firewalls, SSH security, and system hardening"
     ],
     "textbooks": [
-      "Mechanics and Thermodynamics of Propulsion by Philip Hill & Carl Peterson",
-      "Rocket Propulsion Elements by George Sutton & Oscar Biblarz"
+      "UNIX and Linux System Administration Handbook by Evi Nemeth",
+      "Linux Administration: A Beginner's Guide by Wale Soyinka"
     ],
-    "relevance": "Explores actual physical propulsion systems and provides a baseline for comparing classical chemical/electric rocket efficiency against theoretical space-bending warp drives."
+    "relevance": "Alternative winter option for CZU UNIX/OS. Focuses heavily on Linux administration and scripting."
+  },
+  {
+    "id": "udl-wd",
+    "university": "UdL Lleida",
+    "code": "WD (Winter)",
+    "title": "Web dinàmica",
+    "subject": "Escola Politècnica Superior (EPS)",
+    "term": "Winter Semester",
+    "ects": 6,
+    "description": "Dynamic web applications. Focuses on server-side web development, database connectivity (SQL/NoSQL), session management, dynamic page rendering, and security models.",
+    "prerequisites": [],
+    "syllabus_topics": [
+      "Server-side languages (PHP, Node.js, or ASP.NET)",
+      "Database interaction and ORM mapping (e.g. MySQL, MongoDB)",
+      "State management, sessions, cookies, and user authentication",
+      "RESTful API design and JSON serialization",
+      "Web security: CSRF, XSS prevention, and password hashing",
+      "Deploying web applications to cloud/virtual environments"
+    ],
+    "textbooks": [
+      "Node.js Web Development by David Herron",
+      "Web Database Applications with PHP and MySQL by Hugh E. Williams"
+    ],
+    "relevance": "Winter alternative for CZU Web Technologies (Projecte Web is Spring-only). Offered in Digital Design & Creative Tech degree."
+  },
+  {
+    "id": "udl-dcu",
+    "university": "UdL Lleida",
+    "code": "DCU (Winter)",
+    "title": "Disseny Centrat en l'Usuari",
+    "subject": "Escola Politècnica Superior (EPS)",
+    "term": "Winter Semester",
+    "ects": 6,
+    "description": "User-Centered UI/UX Design. Focuses on user interface wireframing, UX heuristics, usability testing, layout design for web/mobile, and frontend implementation.",
+    "prerequisites": [],
+    "syllabus_topics": [
+      "User research, personas, and user journey mapping",
+      "Usability heuristics and interface design guidelines",
+      "Wireframing, interactive prototyping using Figma/Adobe XD",
+      "Accessibility standards (WCAG) and responsive web interface design",
+      "Usability evaluation methods and user testing procedures",
+      "Frontend layout styling and UI components integration"
+    ],
+    "textbooks": [
+      "Don't Make Me Think by Steve Krug",
+      "The Design of Everyday Things by Don Norman"
+    ],
+    "relevance": "Alternative winter option for CZU Web Technologies. Focuses on web/app layout design and usability."
+  },
+  {
+    "id": "udl-ea",
+    "university": "UdL Lleida",
+    "code": "EA (Winter)",
+    "title": "Estadística Avançada",
+    "subject": "Facultat de Dret, Economia i Turisme (FDET)",
+    "term": "Winter Semester",
+    "ects": 6,
+    "description": "Advanced statistical methods. Covers probability theory, statistical inference, confidence intervals, hypothesis testing, ANOVA, correlation, and multi-variable regression models.",
+    "prerequisites": [],
+    "syllabus_topics": [
+      "Probability spaces, random variables, and expectation",
+      "Sampling distributions and Central Limit Theorem",
+      "Estimation of parameters and confidence intervals",
+      "Parametric and non-parametric hypothesis testing",
+      "Analysis of Variance (ANOVA) and F-tests",
+      "Correlation and multiple linear regression modeling"
+    ],
+    "textbooks": [
+      "Statistics for Business and Economics by Paul Newbold",
+      "Introductory Statistics by Sheldon Ross"
+    ],
+    "relevance": "Winter alternative for CZU Statistics (Estadística i Optimització is Spring-only). Offered under Business Administration (ADE)."
+  },
+  {
+    "id": "udl-fc",
+    "university": "UdL Lleida",
+    "code": "FC (Winter)",
+    "title": "Fonaments de Comptabilitat",
+    "subject": "Facultat de Dret, Economia i Turisme (FDET)",
+    "term": "Winter Semester",
+    "ects": 6,
+    "description": "Foundations of Financial Accounting. Focuses on the accounting cycle, double-entry bookkeeping, recording operations, journal ledger entries, and financial statements preparation.",
+    "prerequisites": [],
+    "syllabus_topics": [
+      "Introduction to accounting theory, standards, and regulatory frameworks",
+      "The double-entry ledger system and basic accounting equation",
+      "Recording purchases, sales, payroll, and asset acquisitions",
+      "Inventory valuation models and year-end inventory adjustments",
+      "Financial close, depreciation calculation, and tax entries",
+      "Compilation of Balance Sheets and Profit and Loss Statements"
+    ],
+    "textbooks": [
+      "Financial Accounting: An Introduction by Pauline Weetman",
+      "Fundamentals of Accounting (Spanish/EU Plan General Contable)"
+    ],
+    "relevance": "Direct match for CZU Accounting requirement. Offered by Business Administration (ADE) faculty in Winter."
   }
 ]
