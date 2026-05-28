@@ -1,7 +1,7 @@
 {
   "academics": {
     "title": "Academic Mapping & Coordinator Approvals",
-    "summary": "Academic fit is the first blocker. Universidade Portucalense (UPT) offers a direct, hassle-free 100% course mapping in English. Universitat de Lleida (UdL) offers great courses but requires coordinator-approved substitutions for two subjects.",
+    "summary": "Academic fit is the first blocker. Universidade Portucalense (UPT) and TUKE Košice offer direct, hassle-free 100% course mapping in English in the Winter semester. Universitat de Lleida (UdL) offers great courses but requires coordinator-approved substitutions for two subjects.",
     "key_principles": [
       {
         "name": "UPT Porto Alignment",
@@ -12,23 +12,27 @@
         "description": "Web Design and Statistics are Spring-only in UdL's main Computer Science degree. Winter alternatives are available: Web dinàmica (Digital Design dept) and Estadística Avançada (FDET Business dept). Requires approvals."
       },
       {
+        "name": "TUKE Košice Alignment",
+        "description": "All 4 core courses are offered in English in the Winter semester (Operating Systems, Web Technologies, Applied Statistics under FEI, and Financial Accounting under Faculty of Economics). 100% English Match."
+      },
+      {
         "name": "ECTS Equivalency",
-        "description": "ECTS credits are fully transferable 1:1 to CZU Prague. UdL's Operating Systems is a heavy 9 ECTS course, whereas UPT's is 6 ECTS."
+        "description": "ECTS credits are fully transferable 1:1 to CZU Prague. UdL's Operating Systems is a heavy 9 ECTS course, whereas UPT's and TUKE's are 6 ECTS."
       }
     ],
-    "limits_on_antigravity": "Learning Agreements must be signed by the CZU PEF coordinator (Veronika Brecklová) and the host coordinator (UPT: erasmus+_dct@upt.pt, UdL: Prof. Álvaro de Gracia eps.international@udl.cat) before departure."
+    "limits_on_antigravity": "Learning Agreements must be signed by the CZU PEF coordinator (Veronika Brecklová) and the host coordinator (UPT: erasmus+_dct@upt.pt, UdL: Prof. Álvaro de Gracia eps.international@udl.cat, TUKE: erasmus@tuke.sk) before departure."
   },
   "finances": {
     "title": "Erasmus+ Grants & Work Rights",
-    "summary": "Financial support is identical from CZU, but the cost of living differences between Porto and Lleida create a major divergence in your net monthly balance.",
+    "summary": "Financial support is identical from CZU, but the cost of living differences between Porto, Lleida, and Košice create a major divergence in your net monthly balance.",
     "candidate_theories": [
       {
         "name": "Erasmus+ Grant Rate",
-        "description": "Both Spain and Portugal are Group B countries. CZU pays a base study grant of €600 per month."
+        "description": "Spain, Portugal, and Slovakia are all Group B countries. CZU pays a base study grant of €600 per month."
       },
       {
         "name": "Green Travel Top-Up",
-        "description": "€50 one-time top-up for environmentally friendly travel (e.g. taking the train Prague -> Munich -> Paris -> Barcelona/Lleida) plus up to 4 days of daily grant."
+        "description": "€50 one-time top-up for environmentally friendly travel (e.g. taking the train Prague -> Vienna -> Košice or Prague -> Munich -> Paris -> Barcelona/Lleida) plus up to 4 days of daily grant."
       },
       {
         "name": "Fewer Opportunities",
@@ -38,8 +42,10 @@
     "challenges": [
       "Lleida (Studio vs. Shared): A studio costs €756-1010/mo (net -€156 to -€410 after grant), while a shared flat costs €518-840/mo (net +€82 to -€240). Sharing in Lleida is highly sustainable.",
       "Porto (Studio vs. Shared): A studio costs €1000-1460/mo (net -€400 to -€860), while a shared flat costs €630-1090/mo (net -€30 to -€490). Porto requires substantial personal savings.",
+      "Košice (Studio vs. Shared): A studio costs €400-650/mo (net +€200 to -€50), while a shared flat room costs €200-450/mo (net +€400 to +€150). Košice is the most financially sustainable choice.",
       "Spanish Work Rights: Non-EU students in Spain can work up to 30 hours per week under Royal Decree 1155/2024. Job search is automatic.",
       "Portuguese Work Rights: Non-EU students in Portugal can work up to 20 hours per week during the semester, and full-time during holidays.",
+      "Slovak Work Rights: Non-EU students in Slovakia can work up to 20 hours per week under student job agreements (Dohoda o brigádnickej práci študentov). Exempt from work permits.",
       "Remote Work & Social Security: To work remotely for a Czech employer, you remain a Czech tax resident (<183 days), but your employer must apply for a temporary A1 certificate to avoid foreign social security liabilities."
     ]
   },
@@ -48,19 +54,20 @@
     "summary": "As a Turkish citizen holding a valid Czech student residence permit, you are protected under EU Directive 2016/801 for intra-EU mobility. You do not need a new student visa, but notification is mandatory.",
     "mechanism": "The host university's International Relations Office (ORI) must submit a formal mobility notification to the immigration authorities at least 1 month prior to arrival. If this is missed or late, your entry could be deemed illegal.",
     "exotic_matter": {
-      "explanation": "For Spain, the UdL ORI notifies the Delegación del Gobierno en Cataluña. For Portugal, UPT notifies AIMA (Agency for Integration, Migration and Asylum).",
+      "explanation": "For Spain, the UdL ORI notifies the Delegación del Gobierno en Cataluña. For Portugal, UPT notifies AIMA (Agency for Integration, Migration and Asylum). For Slovakia, TUKE notifies the Foreign Police (cudzinecká polícia).",
       "status": "You must supply: passport scan, valid Czech residence permit, signed Learning Agreement, health insurance, and proof of financial means."
     },
     "limitations": [
       "Spain: Processing takes up to 30 days. No news after 30 days represents administrative approval (silence is positive).",
       "Portugal: Upon arrival, you must register your presence with AIMA/police within 30 days.",
+      "Slovakia: Register presence with Foreign Police (cudzinecká polícia) within 3 days of arrival in the country if staying in private housing.",
       "Czech Republic: Your Czech residence permit must remain valid for the entire duration of your Erasmus exchange. Do not let it expire!",
       "Cyprus (Ruled Out): Non-Schengen. Turkish passport holders are explicitly excluded from visa-free entry with a Schengen permit. A national visa is mandatory but highly restricted."
     ]
   },
   "housing": {
     "title": "Student Housing & Pet-Friendly Leases",
-    "summary": "Securing accommodation is a major challenge, especially when traveling with a cat. Tenancy laws in both Spain and Portugal permit landlords to ban pets.",
+    "summary": "Securing accommodation is a major challenge, especially when traveling with a cat. Tenancy laws in Spain, Portugal, and Slovakia permit landlords to ban pets.",
     "items": [
       {
         "name": "Porto Housing Market",
@@ -73,6 +80,12 @@
         "claim": "UdL recommends residencias like La Vila de Lleida (prices start at €316/mo) and private shared flats.",
         "scientific_fact": "Shared flat rooms are €200-350/mo, and private T0 studios are €360-450/mo. Best neighborhoods: Cappont (near EPS campus and Boulder Indoor gym).",
         "proof_of_debunk": "Under Spanish Urban Leases Law (LAU), landlords can legally ban pets. You must seek written confirmation or ensure the lease has no pet prohibition clause."
+      },
+      {
+        "name": "Košice Housing Market",
+        "claim": "TUKE offers cheap student dormitories (Jedlíkova etc. at ~€100-200/mo), but they strictly prohibit pets. Private shared flat or studio is required.",
+        "scientific_fact": "Shared flat rooms are €200-450/mo, and private T0/T1 studios are €400-650/mo. Best areas: Staré Mesto (Old Town), Sever, Západ.",
+        "proof_of_debunk": "Pet policies are lease-specific in Slovakia. You must ensure no 'no-pets' clause exists in the rental agreement before signing."
       }
     ]
   },
@@ -84,19 +97,25 @@
         "name": "Veterinary Compliance Timeline",
         "claim": "Cat must be microchipped, vaccinated for rabies, and issued an EU Pet Passport.",
         "scientific_fact": "Microchip must be ISO 11784/11785. The rabies vaccine must be given AFTER the microchip. You must wait at least 21 days after the rabies vaccine before traveling.",
-        "proof_of_debunk": "An EU Pet Passport can be issued by any authorized Prague vet clinic. No rabies antibody titer test is needed for travel within Spain/Portugal."
+        "proof_of_debunk": "An EU Pet Passport can be issued by any authorized Prague vet clinic. No rabies antibody titer test is needed for travel within Spain, Portugal, or Slovakia."
       },
       {
         "name": "Airline Choice & Cabin Limits",
         "claim": "Vueling (Prague -> Barcelona direct) offers a generous 10 kg limit (cat + soft carrier). TAP Portugal (Prague -> Porto direct) has a strict 8 kg limit.",
         "scientific_fact": "Vueling soft carrier size: 45 x 39 x 21 cm. TAP soft carrier size: 45 x 30 x 23 cm. TAP strictly weighs the pet and carrier at check-in.",
         "proof_of_debunk": "For Lleida: Fly Vueling to Barcelona (BCN), then take the high-speed Renfe/AVE train to Lleida-Pirineus (1h 15m, carrier allowed). For Porto: Fly TAP or Lufthansa direct."
+      },
+      {
+        "name": "Košice Overland Train Logistics",
+        "claim": "Flying is unnecessary for Košice. Direct daytime trains from Prague to Košice take 7.5 hours and are highly pet-friendly.",
+        "scientific_fact": "Leo Express, RegioJet, and České dráhy run direct trains. Pets in carriers (Leo Express ≤ 40x50x50 cm, ČD ≤ 90x60x40 cm) travel 100% free of charge.",
+        "proof_of_debunk": "This completely avoids airline weight checks (Vueling's 10kg or TAP's 8kg limits) and is much less stressful for the cat. A valid EU Pet Passport, microchip, and rabies vaccine are still legally required."
       }
     ]
   },
   "climbing": {
     "title": "Bouldering & Outdoor Climbing Scene",
-    "summary": "Porto is an indoor-focused bouldering city, whereas Lleida is a world-class outdoor climbing capital. Your lifestyle quality will differ significantly.",
+    "summary": "Porto is an indoor-focused bouldering city, Lleida is a world-class outdoor climbing capital, and Košice offers a balanced mix of massive indoor bouldering and limestone crags.",
     "items": [
       {
         "name": "Porto Gyms & Crags",
@@ -109,6 +128,12 @@
         "claim": "Lleida is a world-famous sport climbing hub with excellent, cheap indoor training.",
         "scientific_fact": "Boulder Indoor Lleida (Carrer de Tèrmens, 3) is a massive 1,700 m² gym costing just €44.50/mo for students. Fanatic is another local bouldering wall.",
         "proof_of_debunk": "Outdoor crags: Santa Linya, Oliana, Camarasa, and El Cogul (bouldering) are within 30-45 mins drive. Margalef and Siurana are within 60 mins. Carpooling (Blablacar) or active local groups are key."
+      },
+      {
+        "name": "Košice Gyms & Crags",
+        "claim": "Košice has a thriving indoor community and excellent rock climbing in eastern Slovakia.",
+        "scientific_fact": "T2 Boulder Arena (Štúrova 44) features a 330 m² bouldering wall and two 15m lead walls. Rozlomity (Študentská 1) offers bouldering and drytooling.",
+        "proof_of_debunk": "Outdoor crags: Turniská (120 routes, bouldering, 30 min drive) and Zádielská Valley (300+ limestone routes in Slovak Karst, 40 min drive) are close and highly accessible."
       }
     ]
   },
@@ -125,6 +150,11 @@
     },
     {
       "citation": "Portuguese Decree-Law no. 14/2021 amending the Legal Regime of Entry, Stay, Exit and Expulsion of Foreigners from National Territory (20-hour work limit for students).",
+      "type": "Government Law",
+      "topic": "Student Work Rights"
+    },
+    {
+      "citation": "Slovak Act No. 404/2011 on Residence of Foreigners and Act No. 5/2004 on Employment Services (20-hour work limit for student residence permit holders).",
       "type": "Government Law",
       "topic": "Student Work Rights"
     },

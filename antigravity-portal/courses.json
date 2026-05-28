@@ -238,5 +238,93 @@
       "Fundamentals of Accounting (Spanish/EU Plan General Contable)"
     ],
     "relevance": "Direct match for CZU Accounting requirement. Offered by Business Administration (ADE) faculty in Winter."
+  },
+  {
+    "id": "tuke-os",
+    "university": "TUKE Košice",
+    "code": "OS (Winter)",
+    "title": "Operating Systems",
+    "subject": "Faculty of Electrical Engineering & Informatics (FEI)",
+    "term": "Winter Semester",
+    "ects": 6,
+    "description": "Fundamental concepts of operating systems, process management, CPU scheduling, memory management, file systems, and shell programming in UNIX/Linux.",
+    "prerequisites": [],
+    "syllabus_topics": [
+      "Process creation, threads, scheduling, and context switching",
+      "Process synchronization, semaphores, and mutual exclusion",
+      "Memory management, paging, segmentation, and virtual memory",
+      "File systems structures, implementation, and shell scripting",
+      "I/O devices and storage management"
+    ],
+    "textbooks": [
+      "Operating System Concepts by Silberschatz, Galvin & Gagne"
+    ],
+    "relevance": "Direct equivalent to CZU Operating Systems requirement. Offered in English."
+  },
+  {
+    "id": "tuke-web",
+    "university": "TUKE Košice",
+    "code": "WEB (Winter)",
+    "title": "Web Technologies",
+    "subject": "Faculty of Electrical Engineering & Informatics (FEI)",
+    "term": "Winter Semester",
+    "ects": 6,
+    "description": "Introduction to web application architecture, layout styling, frontend programming, and basic client-server request handling.",
+    "prerequisites": [],
+    "syllabus_topics": [
+      "Web protocols, HTTP request-response cycle",
+      "HTML5 page structure and semantic elements",
+      "CSS3 layout design, flexbox, grid, and media queries",
+      "Client-side scripting with JavaScript, DOM manipulation",
+      "Form validation and asynchronous AJAX requests"
+    ],
+    "textbooks": [
+      "HTML and CSS: Design and Build Websites by Jon Duckett",
+      "JavaScript and JQuery: Interactive Front-End Web Development by Jon Duckett"
+    ],
+    "relevance": "Direct equivalent to CZU Web Design requirement. Offered in English."
+  },
+  {
+    "id": "tuke-stats",
+    "university": "TUKE Košice",
+    "code": "STATS (Winter)",
+    "title": "Applied Statistics",
+    "subject": "Faculty of Electrical Engineering & Informatics (FEI)",
+    "term": "Winter Semester",
+    "ects": 6,
+    "description": "Covers probability theory, mathematical statistics, testing hypotheses, correlation analysis, and regression modeling.",
+    "prerequisites": [],
+    "syllabus_topics": [
+      "Combinatorics and probability spaces",
+      "Random variables, probability density and distribution functions",
+      "Parameter estimation and confidence intervals",
+      "Hypothesis testing (t-test, chi-square, F-test)",
+      "Correlation and simple linear regression"
+    ],
+    "textbooks": [
+      "Probability and Statistics for Engineers and Scientists by Walpole"
+    ],
+    "relevance": "Direct equivalent to CZU Statistics requirement. Offered in English."
+  },
+  {
+    "id": "tuke-acct",
+    "university": "TUKE Košice",
+    "code": "ACCT (Winter)",
+    "title": "Financial Accounting",
+    "subject": "Faculty of Economics",
+    "term": "Winter Semester",
+    "ects": 6,
+    "description": "Basics of double-entry accounting system, financial recording, and ledger management.",
+    "prerequisites": [],
+    "syllabus_topics": [
+      "Accounting cycle, double-entry bookkeeping",
+      "Recording business operations, purchasing, and sales",
+      "Asset valuation, depreciation methods",
+      "Compiling balance sheet and profit & loss statements"
+    ],
+    "textbooks": [
+      "Financial Accounting by Pauline Weetman"
+    ],
+    "relevance": "Direct match for CZU Accounting requirement. Offered in English."
   }
 ]

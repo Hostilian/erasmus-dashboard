@@ -242,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const checklistWrapper = document.getElementById('checklist-container');
     const btnUniPorto = document.getElementById('btn-uni-porto');
     const btnUniLleida = document.getElementById('btn-uni-lleida');
+    const btnUniKosice = document.getElementById('btn-uni-kosice');
     
     if (!coursesData || !timelineWrapper || !checklistWrapper) return;
     
@@ -249,6 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnUniPorto.addEventListener('click', () => {
       btnUniPorto.classList.add('active');
       btnUniLleida.classList.remove('active');
+      if (btnUniKosice) btnUniKosice.classList.remove('active');
       selectedUniversity = 'UPT Porto';
       selectedCourses.clear();
       renderCourses();
@@ -257,10 +259,22 @@ document.addEventListener('DOMContentLoaded', () => {
     btnUniLleida.addEventListener('click', () => {
       btnUniLleida.classList.add('active');
       btnUniPorto.classList.remove('active');
+      if (btnUniKosice) btnUniKosice.classList.remove('active');
       selectedUniversity = 'UdL Lleida';
       selectedCourses.clear();
       renderCourses();
     });
+
+    if (btnUniKosice) {
+      btnUniKosice.addEventListener('click', () => {
+        btnUniKosice.classList.add('active');
+        btnUniPorto.classList.remove('active');
+        btnUniLleida.classList.remove('active');
+        selectedUniversity = 'TUKE Košice';
+        selectedCourses.clear();
+        renderCourses();
+      });
+    }
 
     renderCourses();
   }
@@ -375,6 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function initCostCalculator() {
     const btnCityPorto = document.getElementById('calc-city-porto');
     const btnCityLleida = document.getElementById('calc-city-lleida');
+    const btnCityKosice = document.getElementById('calc-city-kosice');
     const btnHousingStudio = document.getElementById('calc-housing-studio');
     const btnHousingShared = document.getElementById('calc-housing-shared');
 
@@ -392,15 +407,26 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCityPorto.addEventListener('click', () => {
       btnCityPorto.classList.add('active');
       btnCityLleida.classList.remove('active');
+      if (btnCityKosice) btnCityKosice.classList.remove('active');
       calcCity = 'Porto';
       applyCityDefaults();
     });
     btnCityLleida.addEventListener('click', () => {
       btnCityLleida.classList.add('active');
       btnCityPorto.classList.remove('active');
+      if (btnCityKosice) btnCityKosice.classList.remove('active');
       calcCity = 'Lleida';
       applyCityDefaults();
     });
+    if (btnCityKosice) {
+      btnCityKosice.addEventListener('click', () => {
+        btnCityKosice.classList.add('active');
+        btnCityPorto.classList.remove('active');
+        btnCityLleida.classList.remove('active');
+        calcCity = 'Kosice';
+        applyCityDefaults();
+      });
+    }
 
     // Listeners for Housing Selection
     btnHousingStudio.addEventListener('click', () => {
@@ -442,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sliderUtilities.value = 150;
       sliderClimbing.value = 45;
       sliderTransport.value = 35;
-    } else { // Lleida
+    } else if (calcCity === 'Lleida') {
       if (calcHousing === 'studio') {
         sliderRent.min = 350; sliderRent.max = 500; sliderRent.value = 400;
       } else {
@@ -451,6 +477,15 @@ document.addEventListener('DOMContentLoaded', () => {
       sliderUtilities.value = 90;
       sliderClimbing.value = 40;
       sliderTransport.value = 15;
+    } else { // Kosice
+      if (calcHousing === 'studio') {
+        sliderRent.min = 300; sliderRent.max = 650; sliderRent.value = 450;
+      } else {
+        sliderRent.min = 150; sliderRent.max = 450; sliderRent.value = 250;
+      }
+      sliderUtilities.value = 80;
+      sliderClimbing.value = 40;
+      sliderTransport.value = 0;
     }
 
     updateCalculatorOutputs();
@@ -464,11 +499,17 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         sliderRent.min = 300; sliderRent.max = 600; sliderRent.value = 450;
       }
-    } else { // Lleida
+    } else if (calcCity === 'Lleida') {
       if (calcHousing === 'studio') {
         sliderRent.min = 350; sliderRent.max = 500; sliderRent.value = 400;
       } else {
         sliderRent.min = 200; sliderRent.max = 380; sliderRent.value = 285;
+      }
+    } else { // Kosice
+      if (calcHousing === 'studio') {
+        sliderRent.min = 300; sliderRent.max = 650; sliderRent.value = 450;
+      } else {
+        sliderRent.min = 150; sliderRent.max = 450; sliderRent.value = 250;
       }
     }
     updateCalculatorOutputs();

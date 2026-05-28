@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Erasmus+ Relocation Dashboard & Academic Planner</title>
-  <meta name="description" content="Explore Erasmus+ relocation research, budgets, and visa details for Porto (UPT) and Lleida (UdL) for CZU Prague BSc Informatics student Eren Ozturk.">
+  <meta name="description" content="Explore Erasmus+ relocation research, budgets, and visa details for Porto (UPT), Lleida (UdL), and Košice (TUKE) for CZU Prague BSc Informatics student Eren Ozturk.">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -32,8 +32,8 @@
   <!-- Hero Section -->
   <section class="hero" id="hero-banner">
     <span class="badge">Eren Ozturk • BSc Informatics</span>
-    <h1>UPT Porto vs. UdL Lleida Decision Portal</h1>
-    <p>A comprehensive research platform examining winter semester course mappings, financial balances, pet travel regulations, and bouldering lifestyles to select the optimal study exchange.</p>
+    <h1>Porto vs. Lleida vs. Košice Decision Portal</h1>
+    <p>A comprehensive research platform examining winter semester course mappings, financial balances, pet travel regulations, and bouldering/sport climbing lifestyles to select the optimal study exchange.</p>
     <div class="cta-buttons">
       <button class="btn btn-primary" data-tab="comparison" id="hero-btn-comp">Compare Universities</button>
       <button class="btn btn-secondary" data-tab="calculator" id="hero-btn-calc">Open Budget Calculator</button>
@@ -86,12 +86,13 @@
     <section class="tab-pane" id="comparison">
       <h2 class="section-title-glow" style="margin-bottom: 2rem;">📊 Side-by-Side Destination Comparison</h2>
       <div style="overflow-x: auto; background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem;">
-        <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 900px;">
           <thead>
             <tr style="border-bottom: 2px solid var(--glass-border); font-family: var(--font-title); color: var(--accent-cyan); font-size: 1.1rem;">
               <th style="padding: 1rem;">Metric</th>
-              <th style="padding: 1rem; width: 40%;">UPT Porto (Portugal)</th>
-              <th style="padding: 1rem; width: 40%;">UdL Lleida (Spain)</th>
+              <th style="padding: 1rem; width: 28%;">UPT Porto (Portugal)</th>
+              <th style="padding: 1rem; width: 28%;">UdL Lleida (Spain)</th>
+              <th style="padding: 1rem; width: 28%;">TUKE Košice (Slovakia)</th>
             </tr>
           </thead>
           <tbody style="font-size: 0.95rem;">
@@ -99,41 +100,49 @@
               <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Erasmus Code & Rank</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);"><strong>P PORTO07</strong> (Academic Score: 10/10)</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);"><strong>E LLEIDA01</strong> (Academic Score: 4/10 due to language)</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><strong>SK KOSICE03</strong> (Academic Score: 10/10)</td>
             </tr>
             <tr style="border-bottom: 1px solid var(--glass-border);">
               <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Winter Course Fit</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">✅ 100% Clean Fit</span><br>All 4 courses are core requirements offered in English/bilingual format in Sem 1.</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #fcd34d;">⚠️ Feasible with Substitutions</span><br>Requires approval for Web dinàmica (Digital Design dept) and Estadística Avançada (ADE dept) as winter substitutes.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">✅ 100% Clean Fit</span><br>All 4 core courses are offered in English in Winter. No substitutions needed.</td>
             </tr>
             <tr style="border-bottom: 1px solid var(--glass-border);">
               <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Living Cost Level</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #fca5a5;">🔴 High (€1,000–€1,460 studio)</span><br>Porto is a major tourist/student hub. Rents are significantly higher.</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">🟢 Low (€756–€1,010 studio)</span><br>Lleida is a smaller, inland city. Rents and services are highly affordable.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">🟢 Very Low (€400–€650 studio)</span><br>Košice has very cheap private rentals (shared rooms €200–€450).</td>
             </tr>
             <tr style="border-bottom: 1px solid var(--glass-border);">
               <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Pet Travel Companion</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #fcd34d;">⚠️ Strict 8 kg limit (TAP)</span><br>Direct flight Prague to Porto. 8kg cabin weight is very tight for adult cat + carrier.</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">✅ 10 kg limit (Vueling)</span><br>Fly direct Prague to Barcelona (10kg limit), then take the fast AVE train to Lleida.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">👑 Direct Overland Train</span><br>7.5h direct train Prague to Košice. Cats in carriers travel for free with no cabin weight limits.</td>
             </tr>
             <tr style="border-bottom: 1px solid var(--glass-border);">
               <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Pet Housing Policy</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);">Landlords can legally ban pets in private leases. No official university dorms.</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);">Landlords can legally ban pets. Shared flat search is critical. Resis (Vila) ban pets.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);">TUKE dorms strictly ban pets. Private renting is cheap and required. Landlord approval needed.</td>
             </tr>
             <tr style="border-bottom: 1px solid var(--glass-border);">
               <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Climbing Access</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);">Good indoor gyms (São Rock, Proa, The North Wall). No nearby outdoor rock crags.</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">👑 World-Class Outdoor Crags</span><br>Margalef, Santa Linya, Oliana, Siurana within 60 mins. Boulder Indoor gym is €44.50/mo.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">✅ Balanced Scene</span><br>Turniská crag (30 min) and Zádiel (40 min) are close. Huge T2 Boulder Arena + Rozlomity.</td>
             </tr>
             <tr style="border-bottom: 1px solid var(--glass-border);">
               <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Non-EU Visa / Mobility</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);">Directive 2016/801 applies. UPT notifications to AIMA are slow. Register with local police in 30 days.</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);">Directive 2016/801 applies. UdL ORI notifies Delegación del Gobierno. Positive silence applies after 30 days.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);">Directive 2016/801 applies. TUKE notifies Foreign Police. Register within 3 days of arrival if private.</td>
             </tr>
             <tr>
               <td style="padding: 1.25rem; font-weight: 600; color: var(--text-primary);">Student Work Limits</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);">20 hours/week during semester. AIMA registration required.</td>
               <td style="padding: 1.25rem; color: var(--text-secondary);"><span style="color: #6ee7b7;">✅ 30 hours/week (RD 1155/2024)</span><br>Automatic work rights with university studies.</td>
+              <td style="padding: 1.25rem; color: var(--text-secondary);">20 hours/week under Slovak Student Job agreement. Exempt from separate work permits.</td>
             </tr>
           </tbody>
         </table>
@@ -161,9 +170,10 @@
         <div class="timeline-container">
           <h2 class="section-title-glow" style="margin-bottom: 2rem;">🎓 Course Selection & Academic Fit</h2>
           
-          <div class="uni-toggle-container" style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; max-width: 400px;">
+          <div class="uni-toggle-container" style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; max-width: 500px;">
             <button class="btn-uni active" data-uni="UPT Porto" id="btn-uni-porto" style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--glass-border); background: var(--bg-surface); color: var(--text-main); cursor: pointer; transition: var(--transition-smooth); font-family: var(--font-title); font-weight: 600;">UPT Porto</button>
             <button class="btn-uni" data-uni="UdL Lleida" id="btn-uni-lleida" style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--glass-border); background: var(--bg-surface); color: var(--text-main); cursor: pointer; transition: var(--transition-smooth); font-family: var(--font-title); font-weight: 600;">UdL Lleida</button>
+            <button class="btn-uni" data-uni="TUKE Košice" id="btn-uni-kosice" style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--glass-border); background: var(--bg-surface); color: var(--text-main); cursor: pointer; transition: var(--transition-smooth); font-family: var(--font-title); font-weight: 600;">TUKE Košice</button>
           </div>
 
           <div class="timeline" id="pathway-timeline">
@@ -208,6 +218,7 @@
             <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
               <button class="btn-tool active" id="calc-city-porto" style="flex: 1; padding: 0.6rem; border-radius: 8px;">Porto</button>
               <button class="btn-tool" id="calc-city-lleida" style="flex: 1; padding: 0.6rem; border-radius: 8px;">Lleida</button>
+              <button class="btn-tool" id="calc-city-kosice" style="flex: 1; padding: 0.6rem; border-radius: 8px;">Košice</button>
             </div>
           </div>
 
