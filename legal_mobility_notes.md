@@ -27,6 +27,12 @@ Since you hold a valid Czech student residence permit, you are protected under *
 *   **Timeline:** Submit all files immediately upon nomination.
 *   **Registration on Arrival:** Within **30 days of entering Portugal**, you must register your presence with the local police or AIMA branch.
 
+### Slovakia Procedure (TUKE Košice)
+*   **Host Coordinator Contact:** TUKE International Relations Office (`erasmus@tuke.sk`).
+*   **Action Plan:** TUKE must notify the **Slovak Foreign Police (cudzinecká polícia)** of your mobility.
+*   **Timeline:** Submit all files immediately upon nomination.
+*   **Registration on Arrival:** Within **3 days of entering Slovakia**, you must register your presence with the local Foreign Police branch (*cudzinecká polícia*) if you stay in private accommodation. (If you stay in TUKE dormitories, the dorm administration registers you automatically).
+
 ---
 
 ## 2. Student Work Rights & Remote Employment
@@ -39,6 +45,11 @@ Since you hold a valid Czech student residence permit, you are protected under *
 ### Portugal (UPT Porto)
 *   **Work Hours Limit:** **20 hours per week** during the semester; full-time (40h/week) during official university holidays and breaks.
 *   **Procedural Requirement:** You must hold your AIMA residence registration card and notify AIMA regarding your professional activity.
+
+### Slovakia (TUKE Košice)
+*   **Work Hours Limit:** **20 hours per week** (or roughly 80 hours per month) during the semester.
+*   **Procedural Requirement:** Holders of a temporary residence permit for study in Slovakia have automatic access to the labor market and are exempt from separate work permit requirements.
+*   **Contract Type:** Student work is typically executed via an Agreement on Student Job (*Dohoda o brigádnickej práci študentov*).
 
 ### Remote Work Compliance (Working for your Czech Employer)
 *   **Tax Residency:** Because your Erasmus stay is for a single semester (less than 183 days), you **do not become a tax resident** in Spain or Portugal. Your tax residency remains in the Czech Republic.
@@ -57,7 +68,7 @@ Relocating your cat requires compliance with non-commercial EU pet movement rule
 1.  **ISO Microchip:** Compliant with ISO 11784/11785. *Must be implanted before the rabies vaccine is administered.*
 2.  **Rabies Vaccination:** Must be active and given at least **21 days prior to departure**.
 3.  **EU Pet Passport:** Issued by any authorized veterinarian in Prague, showing the microchip ID and up-to-date vaccine records.
-4.  *No tapeworm treatment (Echinococcus) is required for cats entering Spain or Portugal.*
+4.  *No tapeworm treatment (Echinococcus) is required for cats entering Spain, Portugal, or Slovakia.*
 
 ### Airline Selection & Logistics
 
@@ -69,6 +80,7 @@ Relocating your cat requires compliance with non-commercial EU pet movement rule
 ### Destination Transport Strategy
 *   **For Lleida (Vueling + Train):** Fly Prague to Barcelona (BCN) with Vueling to take advantage of the 10kg cabin allowance. From Barcelona Sants station, take the high-speed **AVE train** directly to Lleida-Pirineus (1h 15m). Cats in carriers are permitted on Renfe/AVE trains.
 *   **For Porto (TAP Direct):** Fly Prague to Porto (OPO) direct. Ensure your cat + carrier is strictly under 8kg, as TAP checks weights at the counter.
+*   **For Košice (Overland Train):** Take a direct daytime or overnight train (České dráhy, RegioJet, or Leo Express) from Prague main station directly to Košice (approx. 7.5 hours). Small pets in a carrier travel **100% free of charge** (carrier size limits: Leo Express ≤ 40x50x50 cm, České dráhy ≤ 90x60x40 cm). This completely bypasses airline weight limits and is much lower stress.
 
 ---
 
